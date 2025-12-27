@@ -1,7 +1,9 @@
+
 import Link from "next/link";
 import { Factory, Linkedin, Twitter, Instagram } from "lucide-react";
 
 const navLinks = [
+  { href: "/about", label: "About Us" },
   { href: "/portfolio", label: "Portfolio" },
   { href: "/technology", label: "Technology" },
   { href: "/people", label: "People" },

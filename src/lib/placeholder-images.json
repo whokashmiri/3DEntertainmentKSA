@@ -57,56 +57,80 @@
     {
       "id": "tech-machine-3",
       "description": "A robotic arm for automated welding.",
-      "imageUrl": "https://images.unsplash.com/photo-1735494033794-b82c88743a16?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHx3ZWxkaW5nJTIwcm9ib3R8ZW58MHx8fHwxNzY2ODYyMDM2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1735494033794-b82c88743a16?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHx3ZWxkaW5nJTIwcm9ib3R8ZW58MHx8fHwxNzY2ODYyMDM2fDA&ixlibrb-4.1.0&q=80&w=1080",
       "imageHint": "welding robot"
     },
     {
       "id": "tech-machine-4",
       "description": "A 3D printer for large-scale composite manufacturing.",
-      "imageUrl": "https://images.unsplash.com/photo-1741517540162-451e3f5d6318?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHwzZCUyMHByaW50ZXIlMjBjb21wb3NpdGV8ZW58MHx8fHwxNzY2ODYyMDM2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1741517540162-451e3f5d6318?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHwzZCUyMHByaW50ZXIlMjBjb21wb3NpdGV8ZW58MHx8fHwxNzY2ODYyMDM2fDA&ixlib.rb-4.1.0&q=80&w=1080",
       "imageHint": "3d printer composite"
     },
     {
       "id": "person-1",
       "description": "Portrait of a male engineer in a factory.",
-      "imageUrl": "https://images.unsplash.com/photo-1581090700227-1e37b190418e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxlbmdpbmVlciUyMHBvcnRyYWl0fGVufDB8fHx8MTc2Njg2MjAzNnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1581090700227-1e37b190418e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxlbmdpbmVlciUyMHBvcnRyYWl0fGVufDB8fHx8MTc2Njg2MjAzNnww&ixlib.rb-4.1.0&q=80&w=1080",
       "imageHint": "engineer portrait"
     },
     {
       "id": "person-2",
       "description": "Portrait of a female designer sketching.",
-      "imageUrl": "https://images.unsplash.com/photo-1654514433925-55871d633ada?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8ZGVzaWduZXIlMjBwb3J0cmFpdHxlbnwwfHx8fDE3NjY4NjA4NzJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1654514433925-55871d633ada?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8ZGVzaWduZXIlMjBwb3J0cmFpdHxlbnwwfHx8fDE3NjY4NjA4NzJ8MA&ixlib.rb-4.1.0&q=80&w=1080",
       "imageHint": "designer portrait"
     },
     {
       "id": "person-3",
       "description": "Portrait of a craftsman working with metal.",
-      "imageUrl": "https://images.unsplash.com/photo-1761753087548-5e4a7f2a6c0b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxjcmFmdHNtYW4lMjBwb3J0cmFpdHxlbnwwfHx8fDE3NjY4NjIwMzZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1761753087548-5e4a7f2a6c0b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxjcmFmdHNtYW4lMjBwb3J0cmFpdHxlbnwwfHx8fDE3NjY4NjIwMzZ8MA&ixlib.rb-4.1.0&q=80&w=1080",
       "imageHint": "craftsman portrait"
     },
     {
       "id": "person-4",
       "description": "Portrait of a project manager on site.",
-      "imageUrl": "https://images.unsplash.com/photo-1652711779351-a11e316b8d22?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8bWFuYWdlciUyMHBvcnRyYWl0fGVufDB8fHx8MTc2Njc5MzkzMXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1652711779351-a11e316b8d22?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8bWFuYWdlciUyMHBvcnRyYWl0fGVufDB8fHx8MTc2Njc5MzkzMXww&ixlib.rb-4.1.0&q=80&w=1080",
       "imageHint": "manager portrait"
     },
     {
       "id": "person-5",
       "description": "Portrait of a CNC operator.",
-      "imageUrl": "https://images.unsplash.com/photo-1575419262040-61aaba02f078?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxvcGVyYXRvciUyMHBvcnRyYWl0fGVufDB8fHx8MTc2Njg2MjAzNnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1575419262040-61aaba02f078?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxvcGVyYXRvciUyMHBvcnRyYWl0fGVufDB8fHx8MTc2Njg2MjAzNnww&ixlib.rb-4.1.0&q=80&w=1080",
       "imageHint": "operator portrait"
     },
     {
       "id": "person-6",
       "description": "Portrait of a fabrication specialist.",
-      "imageUrl": "https://images.unsplash.com/photo-1601119462238-d7f347e41844?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxmYWJyaWNhdGlvbiUyMHNwZWNpYWxpc3R8ZW58MHx8fHwxNzY2ODYyMDM2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1601119462238-d7f347e41844?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxmYWJyaWNhdGlvbiUyMHNwZWNpYWxpc3R8ZW58MHx8fHwxNzY2ODYyMDM2fDA&ixlib.rb-4.1.0&q=80&w=1080",
       "imageHint": "fabrication specialist"
     },
     {
       "id": "contact-map",
       "description": "A greyscale map showing a location.",
-      "imageUrl": "https://images.unsplash.com/photo-1511526088318-f1a6d7646a05?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxncmV5c2NhbGUlMjBtYXB8ZW58MHx8fHwxNzY2ODYyMDM2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1511526088318-f1a6d7646a05?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxncmV5c2NhbGUlMjBtYXB8ZW58MHx8fHwxNzY2ODYyMDM2fDA&ixlib.rb-4.1.0&q=80&w=1080",
       "imageHint": "greyscale map"
+    },
+    {
+      "id": "about-team-1",
+      "description": "A group of engineers in a collaborative meeting.",
+      "imageUrl": "https://images.unsplash.com/photo-1581092446327-9b52bd1570c2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxlbmdpbmVlcnMlMjBtZWV0aW5nfGVufDB8fHx8MTc2Njg2MzQxMHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "engineers meeting"
+    },
+    {
+      "id": "about-office-1",
+      "description": "A modern, industrial-style office environment.",
+      "imageUrl": "https://images.unsplash.com/photo-1594235046256-90e5572fd5f9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxpbmR1c3RyaWFsJTIwb2ZmaWNlfGVufDB8fHx8MTc2Njg2MzQxMHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "industrial office"
+    },
+    {
+      "id": "about-sketch-1",
+      "description": "Creative sketches and designs on a whiteboard.",
+      "imageUrl": "https://images.unsplash.com/photo-1578401058525-35aaec0b4658?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxjcmVhdGl2ZSUyMHNrZXRjaHxlbnwwfHx8fDE3NjY4NjM0MTF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "creative sketch"
+    },
+    {
+      "id": "about-drawing-1",
+      "description": "Detailed engineering drawings and blueprints.",
+      "imageUrl": "https://images.unsplash.com/photo-1764740093413-0faeb443f764?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8ZW5naW5lZXJpbmclMjBibHVlcHJpbnR8ZW58MHx8fHwxNzY2ODQ2MzQ2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "engineering blueprint"
     }
   ]
 }
