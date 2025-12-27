@@ -5,8 +5,9 @@ import { Button } from "@/components/ui/button";
 import { Heading } from "@/components/ui/heading";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
-import { capabilities, industries } from "@/lib/data";
+import { capabilities, industries, team } from "@/lib/data";
 import { ArrowRight, DraftingCompass, Factory, Cpu, VenetianMask, Clapperboard, Wrench, Check, Code, ScanSearch, Wind, Bot, Printer, PaintBucket } from "lucide-react";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 
 const whatWeDo = [
     { title: "Creative Design & Engineering", icon: DraftingCompass },
@@ -28,6 +29,8 @@ const featuredCapabilities = [
 
 export default function Home() {
   const heroImage = PlaceHolderImages.find((img) => img.id === "hero-background");
+  const leadershipTeam = team.filter(p => p.department === 'Leadership').slice(0, 5);
+
 
   return (
     <div className="flex flex-col">
@@ -143,8 +146,57 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Featured Projects Section */}
+      {/* Team Section */}
       <section className="py-20 md:py-32 bg-secondary">
+        <div className="container mx-auto px-4">
+          <Heading className="text-center mb-12 md:mb-16">Meet the Team</Heading>
+          <Carousel
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+            className="w-full max-w-6xl mx-auto"
+          >
+            <CarouselContent>
+              {team.slice(0,5).map((person, index) => {
+                const personImage = PlaceHolderImages.find(p => p.id === person.imageId);
+                return (
+                  <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                    <div className="p-1">
+                      <Card className="bg-background border-border/50 overflow-hidden">
+                        <CardContent className="flex flex-col items-center justify-center p-6 aspect-square">
+                           {personImage && (
+                              <Image
+                                src={personImage.imageUrl}
+                                alt={person.name}
+                                width={150}
+                                height={150}
+                                className="w-36 h-36 rounded-full object-cover mb-4 border-4 border-primary/20"
+                                data-ai-hint={personImage.imageHint}
+                              />
+                           )}
+                          <h3 className="font-headline text-xl font-semibold uppercase tracking-wider text-white">{person.name}</h3>
+                          <p className="text-primary font-medium">{person.title}</p>
+                        </CardContent>
+                      </Card>
+                    </div>
+                  </CarouselItem>
+                );
+              })}
+            </CarouselContent>
+            <CarouselPrevious className="hidden sm:flex" />
+            <CarouselNext className="hidden sm:flex" />
+          </Carousel>
+          <div className="text-center mt-12">
+            <Button asChild size="lg" className="font-bold tracking-wide">
+              <Link href="/people">Meet All Our People <ArrowRight className="ml-2 h-5 w-5"/></Link>
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* Featured Projects Section */}
+      <section className="py-20 md:py-32 bg-background">
         <div className="container mx-auto px-4">
           <Heading className="text-center mb-12 md:mb-16">Featured Capabilities</Heading>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -152,7 +204,7 @@ export default function Home() {
               const Icon = capability.icon;
               return (
                 <Link href="/services" key={capability.title}>
-                  <Card className="group overflow-hidden relative border-border/50 h-full flex flex-col items-center justify-center p-8 bg-background hover:bg-background/80 transition-colors duration-300">
+                  <Card className="group overflow-hidden relative border-border/50 h-full flex flex-col items-center justify-center p-8 bg-secondary hover:bg-secondary/80 transition-colors duration-300">
                       <Icon className="w-16 h-16 text-primary mb-4 transition-transform duration-300 group-hover:scale-110" />
                       <h3 className="font-headline text-xl font-semibold uppercase tracking-wider text-white text-center">{capability.title}</h3>
                   </Card>
@@ -169,7 +221,7 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-background">
+      <section className="bg-secondary">
         <div className="container mx-auto px-4 py-20 text-center">
             <h2 className="font-headline text-4xl font-bold uppercase tracking-wider text-white">Ready to build the future?</h2>
             <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">Let's discuss how our advanced manufacturing and creative design capabilities can bring your vision to life.</p>
