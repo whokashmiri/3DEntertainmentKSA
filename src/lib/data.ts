@@ -1,4 +1,4 @@
-import { DraftingCompass, Cog, Cpu, Layers, VenetianMask, Factory, LucideIcon } from "lucide-react";
+import { DraftingCompass, Cog, Cpu, Layers, VenetianMask, Factory, LucideIcon, Wrench, PaintRoller, ScanLine, CircuitBoard, PenTool, Clapperboard } from "lucide-react";
 
 export type Capability = {
   title: string;
@@ -38,6 +38,95 @@ export const capabilities: Capability[] = [
     icon: Factory,
   },
 ];
+
+export type ServiceCategory = {
+    title: string;
+    items: string[];
+    imageId: string;
+    icon: LucideIcon;
+};
+
+export const serviceCategories: ServiceCategory[] = [
+    {
+        title: "Design & Engineering",
+        items: [
+            "Concept design",
+            "Technical drawings",
+            "Structural engineering",
+            "Shop drawings",
+        ],
+        imageId: "about-drawing-1",
+        icon: PenTool,
+    },
+    {
+        title: "E-Production",
+        items: [
+            "Digital modeling",
+            "3D scanning",
+            "Rapid prototyping",
+            "Virtual pre-visualization",
+        ],
+        imageId: "tech-machine-4",
+        icon: ScanLine,
+    },
+    {
+        title: "Animation, VFX & Content",
+        items: [
+            "3D animation",
+            "Motion graphics",
+            "Projection mapping content",
+            "Visual effects",
+        ],
+        imageId: "about-sketch-1",
+        icon: Clapperboard,
+    },
+    {
+        title: "Machining & Cutting",
+        items: [
+            "CNC machining",
+            "Laser, plasma & waterjet cutting",
+            "Precision milling & turning",
+        ],
+        imageId: "tech-machine-1",
+        icon: Cpu,
+    },
+    {
+        title: "Coating & Cladding",
+        items: [
+            "Polyurea",
+            "Hard coating",
+            "Metal cladding",
+            "Decorative film lamination",
+            "Veneer pressing",
+        ],
+        imageId: "tech-machine-2",
+        icon: PaintRoller,
+    },
+    {
+        title: "Installations & Special Construction",
+        items: [
+            "On-site assembly",
+            "Themed environment construction",
+            "Exhibition & event setup",
+            "Scenic builds",
+            "Large-scale installations",
+        ],
+        imageId: "portfolio-project-2",
+        icon: Wrench,
+    },
+    {
+        title: "Electronics & Programming",
+        items: [
+            "LED integration",
+            "Motion systems",
+            "Interactive installations",
+            "Control systems & automation",
+        ],
+        imageId: "portfolio-project-5",
+        icon: CircuitBoard,
+    },
+];
+
 
 export type Project = {
   title: string;

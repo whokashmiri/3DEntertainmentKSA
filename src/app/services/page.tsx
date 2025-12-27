@@ -1,8 +1,17 @@
 
+import Image from "next/image";
 import { Heading } from "@/components/ui/heading";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { capabilities } from "@/lib/data";
+import { serviceCategories } from "@/lib/data";
+import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { Check } from "lucide-react";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "Services | 3D Entertainment Co.",
+    description: "Our services include installations, special construction, CNC cutting, themed construction, and our animation studio in Saudi Arabia.",
+    keywords: "installation services Saudi, CNC cutting, themed construction, animation studio Saudi",
+};
 
 export default function ServicesPage() {
   return (
@@ -13,17 +22,43 @@ export default function ServicesPage() {
       </p>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {capabilities.map((capability) => {
-            const Icon = capability.icon;
-            return (
-                <Card key={capability.title} className="bg-secondary border-border/50 text-center p-6 flex flex-col items-center transition-transform duration-300 hover:-translate-y-2">
-                    <div className="p-4 bg-background rounded-md inline-block mb-4">
-                        <Icon className="w-10 h-10 text-primary" />
+        {serviceCategories.map((category) => {
+          const categoryImage = PlaceHolderImages.find(p => p.id === category.imageId);
+          const Icon = category.icon;
+          return (
+            <Card key={category.title} className="bg-secondary border-border/50 flex flex-col">
+              <CardHeader>
+                {categoryImage && (
+                    <div className="relative h-48 w-full rounded-md overflow-hidden">
+                        <Image
+                            src={categoryImage.imageUrl}
+                            alt={category.title}
+                            fill
+                            className="object-cover"
+                            data-ai-hint={categoryImage.imageHint}
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                        <div className="absolute bottom-4 left-4 flex items-center gap-3">
+                             <div className="p-2 bg-primary/80 backdrop-blur-sm rounded-md">
+                                <Icon className="w-6 h-6 text-white" />
+                             </div>
+                             <CardTitle className="font-headline text-xl text-white uppercase tracking-wider">{category.title}</CardTitle>
+                        </div>
                     </div>
-                    <h3 className="font-headline text-2xl font-semibold uppercase tracking-wider text-white mb-2">{capability.title}</h3>
-                    <p className="text-muted-foreground">{capability.description}</p>
-                </Card>
-            );
+                )}
+              </CardHeader>
+              <CardContent className="flex-grow pt-0">
+                <ul className="space-y-3">
+                  {category.items.map((item) => (
+                    <li key={item} className="flex items-start gap-3">
+                      <Check className="h-5 w-5 text-primary/70 mt-0.5 shrink-0" />
+                      <span className="text-muted-foreground">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </CardContent>
+            </Card>
+          );
         })}
       </div>
     </div>
