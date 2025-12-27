@@ -6,7 +6,16 @@ import { Heading } from "@/components/ui/heading";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { capabilities, featuredProjects, industries } from "@/lib/data";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, DraftingCompass, Factory, Cpu, VenetianMask, Clapperboard, Wrench, Check } from "lucide-react";
+
+const whatWeDo = [
+    { title: "Creative Design & Engineering", icon: DraftingCompass },
+    { title: "Steel, Wood, Foam & Composite Fabrication", icon: Factory },
+    { title: "CNC Machining & Digital Production", icon: Cpu },
+    { title: "Themed Environments & Scenic Construction", icon: VenetianMask },
+    { title: "Animation, VFX & Digital Content", icon: Clapperboard },
+    { title: "Installation & Turnkey Delivery", icon: Wrench },
+];
 
 export default function Home() {
   const heroImage = PlaceHolderImages.find((img) => img.id === "hero-background");
@@ -69,17 +78,28 @@ export default function Home() {
         </div>
       </section>
       
-      {/* About Us Snippet */}
+      {/* What We Do Section */}
       <section className="py-20 md:py-32 bg-secondary">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <Heading>Precision. Power. Performance.</Heading>
+              <Heading>We Design, Engineer, and Build Extraordinary Experiences</Heading>
               <p className="mt-6 text-muted-foreground text-lg">
-                3D Entertainment Co. is a powerhouse of innovation, blending cutting-edge technology with master craftsmanship. Based in Saudi Arabia, we are at the forefront of the industrial sector, delivering world-class solutions from creative design to advanced manufacturing. Our commitment is to quality, precision, and pushing the boundaries of what's possible.
+                 3D Entertainment Co. is a multidisciplinary creative and fabrication powerhouse based in Saudi Arabia. We unite artists, architects, engineers, programmers, and master craftsmen with one of the region’s most advanced manufacturing facilities — delivering turnkey solutions for entertainment, film, hospitality, retail, and corporate environments.
               </p>
+              <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-4">
+                {whatWeDo.map((item) => {
+                  const Icon = item.icon;
+                  return (
+                    <div key={item.title} className="flex items-center gap-3">
+                      <Icon className="w-6 h-6 text-primary" />
+                      <span className="text-white">{item.title}</span>
+                    </div>
+                  )
+                })}
+              </div>
               <Button asChild size="lg" className="mt-8 font-bold tracking-wide">
-                <Link href="/people">Meet The Team</Link>
+                <Link href="/about">Learn More About Us</Link>
               </Button>
             </div>
             <div>
