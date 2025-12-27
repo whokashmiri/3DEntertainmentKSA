@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Heading } from "@/components/ui/heading";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
-import { capabilities, featuredProjects } from "@/lib/data";
+import { capabilities, featuredProjects, industries } from "@/lib/data";
 import { ArrowRight } from "lucide-react";
 
 export default function Home() {
@@ -96,8 +96,26 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Featured Projects Section */}
+      {/* Industries Served Section */}
       <section className="py-20 md:py-32 bg-background">
+        <div className="container mx-auto px-4">
+          <Heading className="text-center mb-12 md:mb-16">Industries We Serve</Heading>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+            {industries.map((industry) => {
+                const Icon = industry.icon;
+                return (
+                  <Card key={industry.name} className="bg-secondary border-border/50 text-center p-6 flex flex-col items-center justify-center transition-transform duration-300 hover:-translate-y-2">
+                    <Icon className="w-12 h-12 text-primary mb-4" />
+                    <h3 className="font-semibold text-lg text-white">{industry.name}</h3>
+                  </Card>
+                );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* Featured Projects Section */}
+      <section className="py-20 md:py-32 bg-secondary">
         <div className="container mx-auto px-4">
           <Heading className="text-center mb-12 md:mb-16">Featured Projects</Heading>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -136,7 +154,7 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-secondary">
+      <section className="bg-background">
         <div className="container mx-auto px-4 py-20 text-center">
             <h2 className="font-headline text-4xl font-bold uppercase tracking-wider text-white">Ready to build the future?</h2>
             <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">Let's discuss how our advanced manufacturing and creative design capabilities can bring your vision to life.</p>

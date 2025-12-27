@@ -1,4 +1,4 @@
-import { DraftingCompass, Cog, Cpu, Layers, VenetianMask, Factory, LucideIcon, Wrench, PaintRoller, ScanLine, CircuitBoard, PenTool, Clapperboard } from "lucide-react";
+import { DraftingCompass, Cog, Cpu, Layers, VenetianMask, Factory, LucideIcon, Wrench, PaintRoller, ScanLine, CircuitBoard, PenTool, Clapperboard, Building, Tv, ShoppingCart, Calendar, Construction, Landmark, Briefcase } from "lucide-react";
 
 export type Capability = {
   title: string;
@@ -319,4 +319,14 @@ export const team: TeamMember[] = [
     department: "Fabrication",
     imageId: "person-6",
   },
+];
+
+export const industries = [
+  { name: "Theme Parks & Attractions", icon: VenetianMask },
+  { name: "Film & TV Production", icon: Tv },
+  { name: "Retail & Hospitality", icon: ShoppingCart },
+  { name: "Events & Exhibitions", icon: Calendar },
+  { name: "Architecture & Construction", icon: Construction },
+  { name: "Museums & Cultural Projects", icon: Landmark },
+  { name: "Corporate & Government", icon: Briefcase },
 ];
