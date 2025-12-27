@@ -123,14 +123,50 @@
     {
       "id": "about-sketch-1",
       "description": "Creative sketches and designs on a whiteboard.",
-      "imageUrl": "https://images.unsplash.com/photo-1578401058525-35aaec0b4658?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxjcmVhdGl2ZSUyMHNrZXRjaHxlbnwwfHx8fDE3NjY4NjM0MTF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1578401058525-35aaec0b4658?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxjcmVhdGl2ZSUyMHNrZXRjaHxlbnwwfHx8fDE3NjY4NjM0MTF8MA&ixlib.rb-4.1.0&q=80&w=1080",
       "imageHint": "creative sketch"
     },
     {
       "id": "about-drawing-1",
       "description": "Detailed engineering drawings and blueprints.",
-      "imageUrl": "https://images.unsplash.com/photo-1764740093413-0faeb443f764?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8ZW5naW5lZXJpbmclMjBibHVlcHJpbnR8ZW58MHx8fHwxNzY2ODQ2MzQ2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1764740093413-0faeb443f764?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8ZW5naW5lZXJpbmclMjBibHVlcHJpbnR8ZW58MHx8fHwxNzY2ODQ2MzQ2fDA&ixlib.rb-4.1.0&q=80&w=1080",
       "imageHint": "engineering blueprint"
+    },
+    {
+      "id": "product-steel",
+      "description": "Fabricated steel beams in a workshop.",
+      "imageUrl": "https://images.unsplash.com/photo-1648671921845-895549805092?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxzdGVlbCUyMGZhYnJpY2F0aW9ufGVufDB8fHx8MTc2Njg2NDA2MXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "steel fabrication"
+    },
+    {
+      "id": "product-wood",
+      "description": "A piece of CNC-carved wood with an intricate pattern.",
+      "imageUrl": "https://images.unsplash.com/photo-1615551794721-3717e6f3b134?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxjbmMlMjB3b29kfGVufDB8fHx8MTc2Njg2NDA2MXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "cnc wood"
+    },
+    {
+      "id": "product-foam",
+      "description": "A large, complex foam sculpture being carved.",
+      "imageUrl": "https://images.unsplash.com/photo-1744063023638-686f50495997?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxmb2FtJTIwc2N1bHB0dXJlfGVufDB8fHx8MTc2Njg2NDA2MXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "foam sculpture"
+    },
+    {
+      "id": "product-plastic",
+      "description": "A stack of clear, vacuum-formed plastic parts.",
+      "imageUrl": "https://images.unsplash.com/photo-1758523670634-df4e12ed7a26?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx2YWN1dW0lMjBmb3JtaW5nfGVufDB8fHx8MTc2Njg2NDA2Mnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "vacuum forming"
+    },
+    {
+      "id": "product-composites",
+      "description": "A glossy carbon fiber panel.",
+      "imageUrl": "https://images.unsplash.com/photo-1724861227843-caf5e06509f7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxjYXJib24lMjBmaWJlcnxlbnwwfHx8fDE3NjY4NjQwNjF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "carbon fiber"
+    },
+    {
+      "id": "product-signage",
+      "description": "A bright, modern LED sign.",
+      "imageUrl": "https://images.unsplash.com/photo-1705264897967-fc762d80d1a3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8bGVkJTIwc2lnbnxlbnwwfHx8fDE3NjY4NjQwNjF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "led sign"
     }
   ]
 }
