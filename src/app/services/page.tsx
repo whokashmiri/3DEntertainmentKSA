@@ -2,15 +2,16 @@
 import Image from "next/image";
 import { Heading } from "@/components/ui/heading";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { serviceCategories } from "@/lib/data";
+import { serviceCategories, projects } from "@/lib/data";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { Check } from "lucide-react";
 import type { Metadata } from "next";
+import { PortfolioGrid } from "../portfolio/components/portfolio-grid";
 
 export const metadata: Metadata = {
-    title: "Services | 3D Entertainment Co.",
-    description: "Our services include installations, special construction, CNC cutting, themed construction, and our animation studio in Saudi Arabia.",
-    keywords: "installation services Saudi, CNC cutting, themed construction, animation studio Saudi",
+    title: "Services & Portfolio | 3D Entertainment Co.",
+    description: "Our services include installations, special construction, CNC cutting, themed construction, and our animation studio in Saudi Arabia. Explore our portfolio of work.",
+    keywords: "installation services Saudi, CNC cutting, themed construction, animation studio Saudi, fabrication portfolio",
 };
 
 export default function ServicesPage() {
@@ -60,6 +61,14 @@ export default function ServicesPage() {
             </Card>
           );
         })}
+      </div>
+
+      <div className="mt-24 md:mt-32">
+        <Heading className="text-center mb-4">Our Work</Heading>
+        <p className="text-center text-muted-foreground text-lg max-w-3xl mx-auto mb-12">
+            We take pride in our ability to transform complex challenges into tangible, high-quality results. Explore a selection of our projects across various industries.
+        </p>
+        <PortfolioGrid projects={projects} />
       </div>
     </div>
   );

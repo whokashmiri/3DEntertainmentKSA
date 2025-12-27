@@ -130,7 +130,7 @@ export const serviceCategories: ServiceCategory[] = [
 
 export type Project = {
   title: string;
-  category: "Fabrication" | "CNC Machining" | "Themed Environments" | "Engineering";
+  category: "Steel Fabrication" | "Wood Fabrication" | "Foam Sculptures" | "Plastic & Resin" | "Fiberglass & Carbon Fiber" | "Signage & Graphics" | "Themed Environments" | "Creative Media";
   industry: string;
   materials: string;
   imageId: string;
@@ -139,14 +139,14 @@ export type Project = {
 export const projects: Project[] = [
   {
     title: "Kinetic Sculpture",
-    category: "CNC Machining",
+    category: "Steel Fabrication",
     industry: "Public Art",
     materials: "Stainless Steel, Aluminum",
     imageId: "portfolio-project-1",
   },
   {
     title: "Facade System",
-    category: "Fabrication",
+    category: "Steel Fabrication",
     industry: "Architecture",
     materials: "Weathering Steel, Glass",
     imageId: "portfolio-project-2",
@@ -159,26 +159,68 @@ export const projects: Project[] = [
     imageId: "portfolio-project-3",
   },
   {
-    title: "Automotive Chassis",
-    category: "Engineering",
+    title: "Automotive Prototype",
+    category: "Fiberglass & Carbon Fiber",
     industry: "Automotive",
     materials: "Carbon Fiber, Titanium",
     imageId: "portfolio-project-4",
   },
   {
     title: "Aerospace Bracket",
-    category: "CNC Machining",
+    category: "Steel Fabrication",
     industry: "Aerospace",
     materials: "Inconel 718",
     imageId: "portfolio-project-5",
   },
   {
     title: "Industrial Gearbox",
-    category: "Fabrication",
+    category: "Steel Fabrication",
     industry: "Heavy Machinery",
     materials: "Hardened Steel",
     imageId: "portfolio-project-6",
   },
+  {
+    title: "Custom Cabinetry",
+    category: "Wood Fabrication",
+    industry: "Interior Design",
+    materials: "Oak, Walnut",
+    imageId: "product-wood",
+  },
+  {
+    title: "Themed Park Entrance",
+    category: "Themed Environments",
+    industry: "Entertainment",
+    materials: "GRC, Foam, Steel",
+    imageId: "portfolio-project-3",
+  },
+  {
+    title: "Animated Short Film",
+    category: "Creative Media",
+    industry: "Media",
+    materials: "Digital",
+    imageId: "about-sketch-1",
+  },
+  {
+    title: "Large Foam Prop",
+    category: "Foam Sculptures",
+    industry: "Events",
+    materials: "EPS Foam, Polyurea",
+    imageId: "product-foam",
+  },
+  {
+    title: "Backlit Channel Letters",
+    category: "Signage & Graphics",
+    industry: "Retail",
+    materials: "Acrylic, Aluminum, LEDs",
+    imageId: "product-signage",
+  },
+  {
+    title: "Clear Product Casing",
+    category: "Plastic & Resin",
+    industry: "Electronics",
+    materials: "Polycarbonate, Acrylic",
+    imageId: "product-plastic",
+  }
 ];
 
 export const featuredProjects = projects.slice(0, 3);

@@ -104,7 +104,7 @@ export default function Home() {
             {featuredProjects.map((project) => {
               const projectImage = PlaceHolderImages.find(p => p.id === project.imageId);
               return (
-                <Link href="/portfolio" key={project.title}>
+                <Link href="/services" key={project.title}>
                   <Card className="group overflow-hidden relative border-border/50">
                     <CardContent className="p-0">
                       {projectImage && (
@@ -129,7 +129,7 @@ export default function Home() {
           </div>
           <div className="text-center mt-12">
             <Button asChild size="lg" variant="outline" className="font-bold tracking-wide">
-              <Link href="/portfolio">View All Projects <ArrowRight className="ml-2 h-5 w-5"/></Link>
+              <Link href="/services">View All Projects <ArrowRight className="ml-2 h-5 w-5"/></Link>
             </Button>
           </div>
         </div>

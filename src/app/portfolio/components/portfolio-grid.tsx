@@ -12,7 +12,7 @@ type PortfolioGridProps = {
   projects: Project[];
 };
 
-const categories = ["All", "Fabrication", "CNC Machining", "Themed Environments", "Engineering"];
+const categories = ["All", "Steel Fabrication", "Wood Fabrication", "Foam Sculptures", "Plastic & Resin", "Fiberglass & Carbon Fiber", "Signage & Graphics", "Themed Environments", "Creative Media"];
 
 export function PortfolioGrid({ projects }: PortfolioGridProps) {
   const [activeCategory, setActiveCategory] = useState("All");
