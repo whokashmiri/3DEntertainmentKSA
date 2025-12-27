@@ -164,18 +164,18 @@ export default function Home() {
                   <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
                     <div className="p-1">
                       <Card className="bg-background border-border/50 overflow-hidden">
-                        <CardContent className="flex flex-col items-center justify-center p-6 aspect-square">
+                        <CardContent className="flex flex-col items-center p-6">
                            {personImage && (
                               <Image
                                 src={personImage.imageUrl}
                                 alt={person.name}
-                                width={150}
-                                height={150}
-                                className="w-36 h-36 rounded-[40px] object-cover mb-4 border-4 border-primary/20"
+                                width={144}
+                                height={180}
+                                className="w-36 h-48 rounded-[40px] object-cover mb-4 border-4 border-primary/20"
                                 data-ai-hint={personImage.imageHint}
                               />
                            )}
-                          <h3 className="font-headline text-xl font-semibold uppercase tracking-wider text-white">{person.name}</h3>
+                          <h3 className="font-headline text-xl font-semibold uppercase tracking-wider text-white mt-2">{person.name}</h3>
                           <p className="text-primary font-medium">{person.title}</p>
                         </CardContent>
                       </Card>
