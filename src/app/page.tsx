@@ -5,8 +5,8 @@ import { Button } from "@/components/ui/button";
 import { Heading } from "@/components/ui/heading";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
-import { capabilities, featuredProjects, industries } from "@/lib/data";
-import { ArrowRight, DraftingCompass, Factory, Cpu, VenetianMask, Clapperboard, Wrench, Check } from "lucide-react";
+import { capabilities, industries } from "@/lib/data";
+import { ArrowRight, DraftingCompass, Factory, Cpu, VenetianMask, Clapperboard, Wrench, Check, Code, ScanSearch, Wind, Bot, Printer, PaintBucket } from "lucide-react";
 
 const whatWeDo = [
     { title: "Creative Design & Engineering", icon: DraftingCompass },
@@ -15,6 +15,15 @@ const whatWeDo = [
     { title: "Themed Environments & Scenic Construction", icon: VenetianMask },
     { title: "Animation, VFX & Digital Content", icon: Clapperboard },
     { title: "Installation & Turnkey Delivery", icon: Wrench },
+];
+
+const featuredCapabilities = [
+  { title: "CNC Machining", icon: Code },
+  { title: "Foam Sculpting", icon: Bot },
+  { title: "Fiberglass & Carbon Fiber", icon: Wind },
+  { title: "Signage & Graphics", icon: VenetianMask },
+  { title: "Large-Format Printing", icon: Printer },
+  { title: "Advanced Coating & Finishing", icon: PaintBucket },
 ];
 
 export default function Home() {
@@ -137,29 +146,15 @@ export default function Home() {
       {/* Featured Projects Section */}
       <section className="py-20 md:py-32 bg-secondary">
         <div className="container mx-auto px-4">
-          <Heading className="text-center mb-12 md:mb-16">Featured Projects</Heading>
+          <Heading className="text-center mb-12 md:mb-16">Featured Capabilities</Heading>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {featuredProjects.map((project) => {
-              const projectImage = PlaceHolderImages.find(p => p.id === project.imageId);
+            {featuredCapabilities.map((capability) => {
+              const Icon = capability.icon;
               return (
-                <Link href="/services" key={project.title}>
-                  <Card className="group overflow-hidden relative border-border/50">
-                    <CardContent className="p-0">
-                      {projectImage && (
-                         <Image
-                          src={projectImage.imageUrl}
-                          alt={project.title}
-                          width={600}
-                          height={400}
-                          className="object-cover w-full h-80 transition-transform duration-300 group-hover:scale-105"
-                          data-ai-hint={projectImage.imageHint}
-                        />
-                      )}
-                      <div className="absolute inset-0 bg-black/60 group-hover:bg-black/75 transition-colors duration-300 flex flex-col justify-end p-6">
-                        <h3 className="font-headline text-2xl font-semibold uppercase tracking-wider text-white">{project.title}</h3>
-                        <p className="text-primary font-semibold">{project.industry}</p>
-                      </div>
-                    </CardContent>
+                <Link href="/services" key={capability.title}>
+                  <Card className="group overflow-hidden relative border-border/50 h-full flex flex-col items-center justify-center p-8 bg-background hover:bg-background/80 transition-colors duration-300">
+                      <Icon className="w-16 h-16 text-primary mb-4 transition-transform duration-300 group-hover:scale-110" />
+                      <h3 className="font-headline text-xl font-semibold uppercase tracking-wider text-white text-center">{capability.title}</h3>
                   </Card>
                 </Link>
               );
@@ -167,7 +162,7 @@ export default function Home() {
           </div>
           <div className="text-center mt-12">
             <Button asChild size="lg" variant="outline" className="font-bold tracking-wide">
-              <Link href="/services">View All Projects <ArrowRight className="ml-2 h-5 w-5"/></Link>
+              <Link href="/services">View All Services <ArrowRight className="ml-2 h-5 w-5"/></Link>
             </Button>
           </div>
         </div>
