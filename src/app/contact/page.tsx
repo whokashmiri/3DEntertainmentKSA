@@ -1,8 +1,9 @@
+
 import Image from "next/image";
 import { Heading } from "@/components/ui/heading";
 import { ContactForm } from "./components/contact-form";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
-import { Phone, Mail, MapPin } from "lucide-react";
+import { Phone, Mail, MapPin, User } from "lucide-react";
 
 export default function ContactPage() {
     const mapImage = PlaceHolderImages.find(p => p.id === "contact-map");
@@ -25,11 +26,20 @@ export default function ContactPage() {
                     <div className="space-y-6">
                         <div className="flex items-start gap-4">
                             <div className="mt-1 text-primary">
+                                <User className="w-6 h-6" />
+                            </div>
+                            <div>
+                                <h4 className="font-semibold text-white">Contact Person</h4>
+                                <p className="text-muted-foreground">Aaqib</p>
+                            </div>
+                        </div>
+                        <div className="flex items-start gap-4">
+                            <div className="mt-1 text-primary">
                                 <MapPin className="w-6 h-6" />
                             </div>
                             <div>
                                 <h4 className="font-semibold text-white">Our Address</h4>
-                                <p className="text-muted-foreground">123 Industrial Zone, Riyadh, Saudi Arabia</p>
+                                <p className="text-muted-foreground">Salamah Center, Jeddah, Saudi Arabia</p>
                             </div>
                         </div>
                          <div className="flex items-start gap-4">
@@ -38,7 +48,7 @@ export default function ContactPage() {
                             </div>
                             <div>
                                 <h4 className="font-semibold text-white">Email Us</h4>
-                                <p className="text-muted-foreground">quotes@3d-entertainment.sa</p>
+                                <p className="text-muted-foreground">info@3dentertainmentksa.com</p>
                             </div>
                         </div>
                          <div className="flex items-start gap-4">
@@ -47,7 +57,8 @@ export default function ContactPage() {
                             </div>
                             <div>
                                 <h4 className="font-semibold text-white">Call Us</h4>
-                                <p className="text-muted-foreground">+966 11 4XXXXXX</p>
+                                <p className="text-muted-foreground">+966 122 751 997</p>
+                                <p className="text-muted-foreground">+966 537 399 808</p>
                             </div>
                         </div>
                     </div>
