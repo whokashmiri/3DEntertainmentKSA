@@ -1,3 +1,112 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "hero-background",
+      "description": "A CNC machine in a dark factory setting with dramatic lighting.",
+      "imageUrl": "https://images.unsplash.com/photo-1738162837335-3745e5d16c09?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxmYWN0b3J5JTIwY25jfGVufDB8fHx8MTc2Njg2MjAzNnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "factory cnc"
+    },
+    {
+      "id": "portfolio-project-1",
+      "description": "An intricate metal sculpture created with CNC machining.",
+      "imageUrl": "https://images.unsplash.com/photo-1691315039107-902800af914d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxtZXRhbCUyMHNjdWxwdHVyZXxlbnwwfHx8fDE3NjY4NjIwMzZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "metal sculpture"
+    },
+    {
+      "id": "portfolio-project-2",
+      "description": "A custom-fabricated architectural element made of steel.",
+      "imageUrl": "https://images.unsplash.com/photo-1764422680747-589446d57ccf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxhcmNoaXRlY3R1cmFsJTIwZGV0YWlsfGVufDB8fHx8MTc2Njg2MjAzN3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "architectural detail"
+    },
+    {
+      "id": "portfolio-project-3",
+      "description": "A themed environment piece, a large prop for an entertainment park.",
+      "imageUrl": "https://images.unsplash.com/photo-1659729683388-e1b7f6624ea8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHx0aGVtZWQlMjBwcm9wfGVufDB8fHx8MTc2Njg2MjAzNnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "themed prop"
+    },
+    {
+      "id": "portfolio-project-4",
+      "description": "A high-precision automotive part made from carbon fiber.",
+      "imageUrl": "https://images.unsplash.com/photo-1760466871156-37559e72b70c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjYXJib24lMjBmaWJlciUyMHBhcnR8ZW58MHx8fHwxNzY2ODYyMDM2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "carbon fiber part"
+    },
+    {
+      "id": "portfolio-project-5",
+      "description": "Complex engineering prototype for the aerospace industry.",
+      "imageUrl": "https://images.unsplash.com/photo-1542446398-4a08b8bfb049?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8YWVyb3NwYWNlJTIwcHJvdG90eXBlfGVufDB8fHx8MTc2Njg2MjAzNnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "aerospace prototype"
+    },
+    {
+      "id": "portfolio-project-6",
+      "description": "A set of large gears for industrial machinery.",
+      "imageUrl": "https://images.unsplash.com/photo-1738918908796-b02a5de5bdae?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxpbmR1c3RyaWFsJTIwZ2VhcnN8ZW58MHx8fHwxNzY2ODYyMDM2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "industrial gears"
+    },
+    {
+      "id": "tech-machine-1",
+      "description": "A large 5-axis CNC machine.",
+      "imageUrl": "https://images.unsplash.com/photo-1607385404764-380a5e06c7fe?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxsYXJnZSUyMGNuY3xlbnwwfHx8fDE3NjY4NjIwMzd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "large cnc"
+    },
+    {
+      "id": "tech-machine-2",
+      "description": "A high-power laser cutter in action.",
+      "imageUrl": "https://images.unsplash.com/photo-1615378809683-6737a9e362f2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxsYXNlciUyMGN1dHRlcnxlbnwwfHx8fDE3NjY4NjIwMzZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "laser cutter"
+    },
+    {
+      "id": "tech-machine-3",
+      "description": "A robotic arm for automated welding.",
+      "imageUrl": "https://images.unsplash.com/photo-1735494033794-b82c88743a16?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHx3ZWxkaW5nJTIwcm9ib3R8ZW58MHx8fHwxNzY2ODYyMDM2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "welding robot"
+    },
+    {
+      "id": "tech-machine-4",
+      "description": "A 3D printer for large-scale composite manufacturing.",
+      "imageUrl": "https://images.unsplash.com/photo-1741517540162-451e3f5d6318?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHwzZCUyMHByaW50ZXIlMjBjb21wb3NpdGV8ZW58MHx8fHwxNzY2ODYyMDM2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "3d printer composite"
+    },
+    {
+      "id": "person-1",
+      "description": "Portrait of a male engineer in a factory.",
+      "imageUrl": "https://images.unsplash.com/photo-1581090700227-1e37b190418e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxlbmdpbmVlciUyMHBvcnRyYWl0fGVufDB8fHx8MTc2Njg2MjAzNnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "engineer portrait"
+    },
+    {
+      "id": "person-2",
+      "description": "Portrait of a female designer sketching.",
+      "imageUrl": "https://images.unsplash.com/photo-1654514433925-55871d633ada?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8ZGVzaWduZXIlMjBwb3J0cmFpdHxlbnwwfHx8fDE3NjY4NjA4NzJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "designer portrait"
+    },
+    {
+      "id": "person-3",
+      "description": "Portrait of a craftsman working with metal.",
+      "imageUrl": "https://images.unsplash.com/photo-1761753087548-5e4a7f2a6c0b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxjcmFmdHNtYW4lMjBwb3J0cmFpdHxlbnwwfHx8fDE3NjY4NjIwMzZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "craftsman portrait"
+    },
+    {
+      "id": "person-4",
+      "description": "Portrait of a project manager on site.",
+      "imageUrl": "https://images.unsplash.com/photo-1652711779351-a11e316b8d22?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8bWFuYWdlciUyMHBvcnRyYWl0fGVufDB8fHx8MTc2Njc5MzkzMXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "manager portrait"
+    },
+    {
+      "id": "person-5",
+      "description": "Portrait of a CNC operator.",
+      "imageUrl": "https://images.unsplash.com/photo-1575419262040-61aaba02f078?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxvcGVyYXRvciUyMHBvcnRyYWl0fGVufDB8fHx8MTc2Njg2MjAzNnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "operator portrait"
+    },
+    {
+      "id": "person-6",
+      "description": "Portrait of a fabrication specialist.",
+      "imageUrl": "https://images.unsplash.com/photo-1601119462238-d7f347e41844?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxmYWJyaWNhdGlvbiUyMHNwZWNpYWxpc3R8ZW58MHx8fHwxNzY2ODYyMDM2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "fabrication specialist"
+    },
+    {
+      "id": "contact-map",
+      "description": "A greyscale map showing a location.",
+      "imageUrl": "https://images.unsplash.com/photo-1511526088318-f1a6d7646a05?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxncmV5c2NhbGUlMjBtYXB8ZW58MHx8fHwxNzY2ODYyMDM2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "greyscale map"
+    }
+  ]
 }

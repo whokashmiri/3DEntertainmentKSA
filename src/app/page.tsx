@@ -1,3 +1,149 @@
+import Image from "next/image";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import { Heading } from "@/components/ui/heading";
+import { Card, CardContent, CardHeader } from "@/components/ui/card";
+import { PlaceHolderImages } from "@/lib/placeholder-images";
+import { capabilities, featuredProjects } from "@/lib/data";
+import { ArrowRight } from "lucide-react";
+
 export default function Home() {
-  return <></>;
+  const heroImage = PlaceHolderImages.find((img) => img.id === "hero-background");
+
+  return (
+    <div className="flex flex-col">
+      {/* Hero Section */}
+      <section className="relative h-[80vh] w-full flex items-center justify-center text-center">
+        {heroImage && (
+          <Image
+            src={heroImage.imageUrl}
+            alt={heroImage.description}
+            fill
+            className="object-cover"
+            priority
+            data-ai-hint={heroImage.imageHint}
+          />
+        )}
+        <div className="absolute inset-0 bg-black/70" />
+        <div className="relative z-10 max-w-4xl mx-auto px-4">
+          <div className="relative">
+            <div className="absolute -top-4 -left-4 w-16 h-16 border-t-4 border-l-4 border-primary opacity-50"></div>
+            <div className="absolute -bottom-4 -right-4 w-16 h-16 border-b-4 border-r-4 border-primary opacity-50"></div>
+            <h1 className="font-headline text-5xl md:text-7xl lg:text-8xl font-extrabold uppercase tracking-widest text-white">
+              3D Entertainment Co.
+            </h1>
+          </div>
+          <p className="mt-6 text-lg md:text-xl text-slate-300 max-w-2xl mx-auto">
+            Pioneering Saudi Industrial Leadership in Creative Fabrication and Advanced Manufacturing
+          </p>
+          <div className="mt-8 flex justify-center gap-4">
+            <Button asChild size="lg" className="font-bold tracking-wide">
+              <Link href="/portfolio">Explore Capabilities</Link>
+            </Button>
+            <Button asChild size="lg" variant="outline" className="font-bold tracking-wide">
+              <Link href="/contact">Request a Quote</Link>
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* Capabilities Section */}
+      <section id="capabilities" className="py-20 md:py-32 bg-background">
+        <div className="container mx-auto px-4">
+          <Heading className="text-center mb-12 md:mb-16">Our Capabilities</Heading>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {capabilities.map((capability) => {
+              const Icon = capability.icon;
+              return (
+                <Card key={capability.title} className="bg-secondary border-border/50 text-center p-6 flex flex-col items-center transition-transform duration-300 hover:-translate-y-2">
+                  <div className="p-4 bg-background rounded-md inline-block mb-4">
+                    <Icon className="w-10 h-10 text-primary" />
+                  </div>
+                  <h3 className="font-headline text-2xl font-semibold uppercase tracking-wider text-white mb-2">{capability.title}</h3>
+                  <p className="text-muted-foreground">{capability.description}</p>
+                </Card>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+      
+      {/* About Us Snippet */}
+      <section className="py-20 md:py-32 bg-secondary">
+        <div className="container mx-auto px-4">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <Heading>Precision. Power. Performance.</Heading>
+              <p className="mt-6 text-muted-foreground text-lg">
+                3D Entertainment Co. is a powerhouse of innovation, blending cutting-edge technology with master craftsmanship. Based in Saudi Arabia, we are at the forefront of the industrial sector, delivering world-class solutions from creative design to advanced manufacturing. Our commitment is to quality, precision, and pushing the boundaries of what's possible.
+              </p>
+              <Button asChild size="lg" className="mt-8 font-bold tracking-wide">
+                <Link href="/people">Meet The Team</Link>
+              </Button>
+            </div>
+            <div>
+               <Image
+                src="https://picsum.photos/seed/11/600/400"
+                alt="Engineers at work"
+                width={600}
+                height={400}
+                className="rounded-lg shadow-2xl"
+                data-ai-hint="engineers work"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Featured Projects Section */}
+      <section className="py-20 md:py-32 bg-background">
+        <div className="container mx-auto px-4">
+          <Heading className="text-center mb-12 md:mb-16">Featured Projects</Heading>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {featuredProjects.map((project) => {
+              const projectImage = PlaceHolderImages.find(p => p.id === project.imageId);
+              return (
+                <Link href="/portfolio" key={project.title}>
+                  <Card className="group overflow-hidden relative border-border/50">
+                    <CardContent className="p-0">
+                      {projectImage && (
+                         <Image
+                          src={projectImage.imageUrl}
+                          alt={project.title}
+                          width={600}
+                          height={400}
+                          className="object-cover w-full h-80 transition-transform duration-300 group-hover:scale-105"
+                          data-ai-hint={projectImage.imageHint}
+                        />
+                      )}
+                      <div className="absolute inset-0 bg-black/60 group-hover:bg-black/75 transition-colors duration-300 flex flex-col justify-end p-6">
+                        <h3 className="font-headline text-2xl font-semibold uppercase tracking-wider text-white">{project.title}</h3>
+                        <p className="text-primary font-semibold">{project.industry}</p>
+                      </div>
+                    </CardContent>
+                  </Card>
+                </Link>
+              );
+            })}
+          </div>
+          <div className="text-center mt-12">
+            <Button asChild size="lg" variant="outline" className="font-bold tracking-wide">
+              <Link href="/portfolio">View All Projects <ArrowRight className="ml-2 h-5 w-5"/></Link>
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="bg-secondary">
+        <div className="container mx-auto px-4 py-20 text-center">
+            <h2 className="font-headline text-4xl font-bold uppercase tracking-wider text-white">Ready to build the future?</h2>
+            <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">Let's discuss how our advanced manufacturing and creative design capabilities can bring your vision to life.</p>
+            <Button asChild size="lg" className="mt-8 font-bold tracking-wide text-lg">
+                <Link href="/contact">Request a Quote</Link>
+            </Button>
+        </div>
+      </section>
+    </div>
+  );
 }
