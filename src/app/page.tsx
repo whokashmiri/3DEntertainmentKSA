@@ -171,7 +171,7 @@ export default function Home() {
                                 alt={person.name}
                                 width={150}
                                 height={150}
-                                className="w-36 h-36 rounded-full object-cover mb-4 border-4 border-primary/20"
+                                className="w-36 h-36 rounded-[40px] object-cover mb-4 border-4 border-primary/20"
                                 data-ai-hint={personImage.imageHint}
                               />
                            )}

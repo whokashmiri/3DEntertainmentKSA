@@ -104,7 +104,7 @@ export default function PeoplePage() {
             {team.filter(p => p.department === 'Leadership').map((person) => {
             const personImage = PlaceHolderImages.find(p => p.id === person.imageId);
             return (
-                <Card key={person.name} className="bg-secondary border-border/50 text-center transform transition-transform duration-300 hover:-translate-y-2">
+                <Card key={person.name} className="bg-secondary border-border/50 text-center transform transition-transform duration-300 hover:-translate-y-2 group">
                 <CardContent className="p-0">
                     {personImage && (
                     <Image
@@ -112,7 +112,7 @@ export default function PeoplePage() {
                         alt={person.name}
                         width={400}
                         height={400}
-                        className="w-full h-auto object-cover grayscale"
+                        className="w-full h-auto object-cover grayscale group-hover:grayscale-0 transition-all duration-300"
                         data-ai-hint={personImage.imageHint}
                     />
                     )}
