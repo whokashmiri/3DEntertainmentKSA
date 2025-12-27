@@ -1,3 +1,4 @@
+
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
@@ -38,7 +39,7 @@ export default function Home() {
           </p>
           <div className="mt-8 flex justify-center gap-4">
             <Button asChild size="lg" className="font-bold tracking-wide">
-              <Link href="/portfolio">Explore Capabilities</Link>
+              <Link href="/services">Explore Services</Link>
             </Button>
             <Button asChild size="lg" variant="outline" className="font-bold tracking-wide">
               <Link href="/contact">Request a Quote</Link>
@@ -50,7 +51,7 @@ export default function Home() {
       {/* Capabilities Section */}
       <section id="capabilities" className="py-20 md:py-32 bg-background">
         <div className="container mx-auto px-4">
-          <Heading className="text-center mb-12 md:mb-16">Our Capabilities</Heading>
+          <Heading className="text-center mb-12 md:mb-16">Our Services</Heading>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {capabilities.map((capability) => {
               const Icon = capability.icon;

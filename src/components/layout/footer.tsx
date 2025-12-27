@@ -4,6 +4,7 @@ import { Factory, Linkedin, Twitter, Instagram } from "lucide-react";
 
 const navLinks = [
   { href: "/about", label: "About Us" },
+  { href: "/services", label: "Services" },
   { href: "/portfolio", label: "Portfolio" },
   { href: "/technology", label: "Technology" },
   { href: "/people", label: "People" },

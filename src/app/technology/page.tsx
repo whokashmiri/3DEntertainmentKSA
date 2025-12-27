@@ -1,55 +1,123 @@
+
 import Image from "next/image";
 import { Heading } from "@/components/ui/heading";
-import { Card, CardContent } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { technologies } from "@/lib/data";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
-import { Separator } from "@/components/ui/separator";
+import { Check } from "lucide-react";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "Technology & Equipment | 3D Entertainment Co.",
+    description: "We operate one of the region’s most advanced fabrication facilities, equipped with industrial-grade CNC systems, composite production lines, and specialized machinery.",
+    keywords: "CNC machining Saudi Arabia, laser cutting, foam CNC, fiberglass production, carbon fiber autoclave",
+};
+
+const technologySections = [
+    {
+        title: "CNC Machining & Cutting",
+        items: [
+            "40 kW CNC plate laser",
+            "CNC I-section & pipe laser",
+            "CNC turning/milling",
+            "5-axis & 4-axis carving machines",
+            "CNC routers",
+            "CNC panel-processing line",
+            "CNC bending & sheet-metal forming",
+            "CNC drilling & tapping",
+            "5m × 5m hot-wire CNC",
+            "CNC glass cutting",
+        ],
+        imageId: "tech-machine-1",
+    },
+    {
+        title: "Welding & Metal Fabrication",
+        items: [
+            "Mobile laser welding",
+            "All welding types",
+            "Iron Man punching & trimming",
+            "Press drills",
+            "Automatic metal sanding",
+            "6-meter plating tanks",
+            "Metal X-ray inspection",
+            "Framecad LGS line",
+        ],
+        imageId: "tech-machine-3",
+    },
+    {
+        title: "Foam, Resin & Composite Production",
+        items: [
+            "Foam coating & cementation lines",
+            "Foam recycling systems",
+            "GRC production line",
+            "Resin injection line",
+            "Carbon fiber autoclave line",
+            "Fiberglass spray & injection systems",
+            "Mold-making production line",
+        ],
+        imageId: "portfolio-project-5",
+    },
+    {
+        title: "Digital Fabrication & Printing",
+        items: [
+            "3D scanner",
+            "Full-color 3D printer farm",
+            "UV printers",
+            "Large-format printers",
+            "Vinyl cutting machines",
+            "Cardboard cutting",
+        ],
+        imageId: "tech-machine-4",
+    },
+    {
+        title: "Finishing & Coating",
+        items: [
+            "Powder-coating line",
+            "Hard-coating line",
+            "Wood & metal sanding lines",
+            "Polyurea coating systems",
+        ],
+        imageId: "tech-machine-2",
+    },
+];
 
 export default function TechnologyPage() {
   return (
     <div className="container mx-auto px-4 py-16 md:py-24">
-      <Heading className="text-center mb-4">Our Technology</Heading>
+      <Heading className="text-center mb-4">Technology & Equipment</Heading>
       <p className="text-center text-muted-foreground text-lg max-w-3xl mx-auto mb-16">
-        We invest in state-of-the-art equipment to push the boundaries of manufacturing. Our facility is equipped with advanced machinery to handle projects of any scale and complexity.
+        We operate one of the region’s most advanced fabrication facilities, equipped with industrial-grade CNC systems, composite production lines, and specialized machinery.
       </p>
 
-      <div className="space-y-16">
-        {technologies.map((tech, index) => {
-          const techImage = PlaceHolderImages.find(p => p.id === tech.imageId);
-          const isReversed = index % 2 !== 0;
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {technologySections.map((section) => {
+          const sectionImage = PlaceHolderImages.find(p => p.id === section.imageId);
           return (
-            <div key={tech.name} className={`grid md:grid-cols-5 gap-8 items-center`}>
-              <div className={`md:col-span-3 ${isReversed ? 'md:order-last' : ''}`}>
-                {techImage && (
-                  <Image
-                    src={techImage.imageUrl}
-                    alt={tech.name}
-                    width={800}
-                    height={600}
-                    className="rounded-lg shadow-2xl object-cover"
-                    data-ai-hint={techImage.imageHint}
-                  />
+            <Card key={section.title} className="bg-secondary border-border/50 flex flex-col">
+              <CardHeader>
+                {sectionImage && (
+                    <Image
+                        src={sectionImage.imageUrl}
+                        alt={section.title}
+                        width={400}
+                        height={250}
+                        className="w-full h-48 object-cover rounded-md"
+                        data-ai-hint={sectionImage.imageHint}
+                    />
                 )}
-              </div>
-              <div className="md:col-span-2">
-                 <Card className="bg-secondary border-border/50">
-                  <CardContent className="p-6">
-                    <h3 className="font-headline text-3xl font-semibold uppercase tracking-wider text-primary">{tech.name}</h3>
-                    <p className="text-muted-foreground mt-2 mb-6">{tech.description}</p>
-                    <Separator className="my-4 bg-border/50" />
-                    <h4 className="font-headline text-lg tracking-wider text-white mb-4">Key Specifications</h4>
-                    <ul className="space-y-2 text-sm">
-                      {tech.specs.map(spec => (
-                        <li key={spec.label} className="flex justify-between items-center">
-                          <span className="font-semibold text-muted-foreground">{spec.label}:</span>
-                          <span className="font-mono text-white text-right">{spec.value}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </CardContent>
-                 </Card>
-              </div>
-            </div>
+                <CardTitle className="font-headline text-xl text-primary uppercase tracking-wider pt-4">{section.title}</CardTitle>
+              </CardHeader>
+              <CardContent className="flex-grow">
+                <ul className="space-y-3">
+                  {section.items.map((item) => (
+                    <li key={item} className="flex items-start gap-3">
+                      <Check className="h-5 w-5 text-primary/70 mt-0.5 shrink-0" />
+                      <span className="text-muted-foreground">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </CardContent>
+            </Card>
           );
         })}
       </div>
