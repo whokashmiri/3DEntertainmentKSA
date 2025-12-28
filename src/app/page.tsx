@@ -72,37 +72,52 @@ export default function Home() {
       {/* What We Do Section */}
       <section className="py-20 md:py-32 bg-secondary">
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <Heading>We Design, Engineer, and Build Extraordinary Experiences</Heading>
-              <p className="mt-6 text-muted-foreground text-lg">
-                 3D Entertainment Co. is a multidisciplinary creative and fabrication powerhouse based in Saudi Arabia. We unite artists, architects, engineers, programmers, and master craftsmen with one of the region’s most advanced manufacturing facilities — delivering turnkey solutions for entertainment, film, hospitality, retail, and corporate environments.
-              </p>
-              <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-4">
-                {whatWeDo.map((item) => {
-                  const Icon = item.icon;
-                  return (
-                    <div key={item.title} className="flex items-center gap-3">
-                      <Icon className="w-6 h-6 text-primary" />
-                      <span className="text-white">{item.title}</span>
-                    </div>
-                  )
-                })}
-              </div>
-              <Button asChild size="lg" className="mt-8 font-bold tracking-wide">
-                <Link href="/about">Learn More About Us</Link>
-              </Button>
+          <div className="text-center max-w-4xl mx-auto">
+            <Heading withLine={false} className="justify-center">We Design, Engineer, and Build Extraordinary Experiences</Heading>
+             <span className="block mx-auto mt-4 h-1 w-20 bg-primary"></span>
+            <p className="mt-6 text-muted-foreground text-lg">
+                3D Entertainment Co. is a multidisciplinary creative and fabrication powerhouse based in Saudi Arabia. We unite artists, architects, engineers, programmers, and master craftsmen with one of the region’s most advanced manufacturing facilities — delivering turnkey solutions for entertainment, film, hospitality, retail, and corporate environments.
+            </p>
+            <div className="mt-8 grid grid-cols-2 md:grid-cols-3 gap-x-6 gap-y-4">
+              {whatWeDo.map((item) => {
+                const Icon = item.icon;
+                return (
+                  <div key={item.title} className="flex items-center gap-3">
+                    <Icon className="w-6 h-6 text-primary" />
+                    <span className="text-white text-left">{item.title}</span>
+                  </div>
+                )
+              })}
             </div>
-            <div>
-               <Image
-                src="https://picsum.photos/seed/11/600/400"
-                alt="Engineers at work"
-                width={600}
-                height={400}
-                className="rounded-lg shadow-2xl"
-                data-ai-hint="engineers work"
-              />
-            </div>
+            <Button asChild size="lg" className="mt-10 font-bold tracking-wide">
+              <Link href="/about">Learn More About Us</Link>
+            </Button>
+          </div>
+          <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-4">
+              <Image
+              src="https://picsum.photos/seed/11/600/400"
+              alt="Engineers at work"
+              width={600}
+              height={400}
+              className="rounded-lg shadow-lg object-cover w-full h-64"
+              data-ai-hint="engineers work"
+            />
+            <Image
+              src="https://picsum.photos/seed/12/600/400"
+              alt="Creative design process"
+              width={600}
+              height={400}
+              className="rounded-lg shadow-lg object-cover w-full h-64"
+              data-ai-hint="creative design"
+            />
+            <Image
+              src="https://picsum.photos/seed/13/600/400"
+              alt="Fabrication in progress"
+              width={600}
+              height={400}
+              className="rounded-lg shadow-lg object-cover w-full h-64"
+              data-ai-hint="fabrication process"
+            />
           </div>
         </div>
       </section>
@@ -149,7 +164,7 @@ export default function Home() {
                                 src={personImage.imageUrl}
                                 alt={person.name}
                                 width={144}
-                                height={180}
+                                height={192}
                                 className="w-36 h-48 rounded-[40px] object-cover mb-4 border-4 border-primary/20"
                                 data-ai-hint={personImage.imageHint}
                               />
@@ -174,7 +189,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Capabilities Section */}
+       {/* Capabilities Section */}
       <section id="capabilities" className="py-20 md:py-32 bg-background">
         <div className="container mx-auto px-4">
           <Heading className="text-center mb-12 md:mb-16">Our Services</Heading>
