@@ -164,8 +164,8 @@ export default function Home() {
                                 src={personImage.imageUrl}
                                 alt={person.name}
                                 width={144}
-                                height={192}
-                                className="w-36 h-48 rounded-[40px] object-cover mb-4 border-4 border-primary/20"
+                                height={224}
+                                className="w-36 h-56 rounded-[40px] object-cover mb-4 border-4 border-primary/20"
                                 data-ai-hint={personImage.imageHint}
                               />
                            )}
@@ -197,7 +197,7 @@ export default function Home() {
             {capabilities.map((capability) => {
               const Icon = capability.icon;
               return (
-                <Card key={capability.title} className="bg-secondary border-border/50 text-center p-6 flex flex-col items-center transition-transform duration-300 hover:-translate-y-2">
+                <Card key={capability.title} className="bg-secondary border-border/50 text-center p-6 flex flex-col items-center transition-transform duration-300 hover:translate-y-2">
                   <div className="p-4 bg-background rounded-md inline-block mb-4">
                     <Icon className="w-10 h-10 text-primary" />
                   </div>
