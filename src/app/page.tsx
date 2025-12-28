@@ -1,3 +1,4 @@
+"use client";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -8,6 +9,8 @@ import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { capabilities, industries, team } from "@/lib/data";
 import { ArrowRight, DraftingCompass, Factory, Cpu, VenetianMask, Clapperboard, Wrench, Check, Code, ScanSearch, Wind, Bot, Printer, PaintBucket } from "lucide-react";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
+import React from "react";
 
 const whatWeDo = [
     { title: "Creative Design & Engineering", icon: DraftingCompass },
@@ -30,6 +33,9 @@ const featuredCapabilities = [
 export default function Home() {
   const heroImage = PlaceHolderImages.find((img) => img.id === "hero-background");
   const leadershipTeam = team.filter(p => p.department === 'Leadership').slice(0, 5);
+  const plugin = React.useRef(
+    Autoplay({ delay: 1000, stopOnInteraction: true })
+  )
 
 
   return (
@@ -145,11 +151,14 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <Heading className="text-center mb-12 md:mb-16">Meet the Team</Heading>
           <Carousel
+            plugins={[plugin.current]}
             opts={{
               align: "start",
               loop: true,
             }}
             className="w-full max-w-6xl mx-auto"
+            onMouseEnter={plugin.current.stop}
+            onMouseLeave={plugin.current.reset}
           >
             <CarouselContent>
               {team.slice(0,5).map((person, index) => {
