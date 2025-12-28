@@ -68,27 +68,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      {/* Capabilities Section */}
-      <section id="capabilities" className="py-20 md:py-32 bg-background">
-        <div className="container mx-auto px-4">
-          <Heading className="text-center mb-12 md:mb-16">Our Services</Heading>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {capabilities.map((capability) => {
-              const Icon = capability.icon;
-              return (
-                <Card key={capability.title} className="bg-secondary border-border/50 text-center p-6 flex flex-col items-center transition-transform duration-300 hover:-translate-y-2">
-                  <div className="p-4 bg-background rounded-md inline-block mb-4">
-                    <Icon className="w-10 h-10 text-primary" />
-                  </div>
-                  <h3 className="font-headline text-2xl font-semibold uppercase tracking-wider text-white mb-2">{capability.title}</h3>
-                  <p className="text-muted-foreground">{capability.description}</p>
-                </Card>
-              );
-            })}
-          </div>
-        </div>
-      </section>
       
       {/* What We Do Section */}
       <section className="py-20 md:py-32 bg-secondary">
@@ -195,8 +174,29 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Capabilities Section */}
+      <section id="capabilities" className="py-20 md:py-32 bg-background">
+        <div className="container mx-auto px-4">
+          <Heading className="text-center mb-12 md:mb-16">Our Services</Heading>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {capabilities.map((capability) => {
+              const Icon = capability.icon;
+              return (
+                <Card key={capability.title} className="bg-secondary border-border/50 text-center p-6 flex flex-col items-center transition-transform duration-300 hover:-translate-y-2">
+                  <div className="p-4 bg-background rounded-md inline-block mb-4">
+                    <Icon className="w-10 h-10 text-primary" />
+                  </div>
+                  <h3 className="font-headline text-2xl font-semibold uppercase tracking-wider text-white mb-2">{capability.title}</h3>
+                  <p className="text-muted-foreground">{capability.description}</p>
+                </Card>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
       {/* Featured Projects Section */}
-      <section className="py-20 md:py-32 bg-background">
+      <section className="py-20 md:py-32 bg-secondary">
         <div className="container mx-auto px-4">
           <Heading className="text-center mb-12 md:mb-16">Featured Capabilities</Heading>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -204,7 +204,7 @@ export default function Home() {
               const Icon = capability.icon;
               return (
                 <Link href="/services" key={capability.title}>
-                  <Card className="group overflow-hidden relative border-border/50 h-full flex flex-col items-center justify-center p-8 bg-secondary hover:bg-secondary/80 transition-colors duration-300">
+                  <Card className="group overflow-hidden relative border-border/50 h-full flex flex-col items-center justify-center p-8 bg-background hover:bg-background/80 transition-colors duration-300">
                       <Icon className="w-16 h-16 text-primary mb-4 transition-transform duration-300 group-hover:scale-110" />
                       <h3 className="font-headline text-xl font-semibold uppercase tracking-wider text-white text-center">{capability.title}</h3>
                   </Card>
@@ -221,7 +221,7 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-secondary">
+      <section className="bg-background">
         <div className="container mx-auto px-4 py-20 text-center">
             <h2 className="font-headline text-4xl font-bold uppercase tracking-wider text-white">Ready to build the future?</h2>
             <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">Let's discuss how our advanced manufacturing and creative design capabilities can bring your vision to life.</p>
