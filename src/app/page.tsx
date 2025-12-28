@@ -83,10 +83,12 @@ export default function Home() {
           autoPlay
           loop
           muted
+          playsInline
           className="absolute top-1/2 left-1/2 w-full h-full object-cover transform -translate-x-1/2 -translate-y-1/2"
         />
         <div className="absolute inset-0 bg-black/70 flex items-center justify-center">
             <TypewriterEffect
+                startOnView
                 text="We are a multidisciplinary creative and fabrication powerhouse, delivering turnkey solutions for entertainment, film, hospitality, retail, and corporate environments."
                 className="text-white text-2xl md:text-4xl font-bold text-center max-w-4xl px-4"
             />
@@ -275,5 +277,3 @@ export default function Home() {
     </div>
   );
 }
-
-    
