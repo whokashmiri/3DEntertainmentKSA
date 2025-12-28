@@ -1,17 +1,15 @@
 
+"use client";
+
 import Image from "next/image";
 import { Heading } from "@/components/ui/heading";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { team, TeamMember } from "@/lib/data";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { Check } from "lucide-react";
-import type { Metadata } from "next";
-
-export const metadata: Metadata = {
-    title: "Our People | 3D Entertainment Co.",
-    description: "Meet the talented team of artists, architects, engineers, programmers, and master craftsmen at 3D Entertainment Co. in Saudi Arabia.",
-    keywords: "fabrication team Saudi Arabia, CNC specialists, scenic artists, engineering team Saudi",
-};
+import React from "react";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
 
 const departments = [
   {
@@ -59,6 +57,11 @@ const departments = [
 ];
 
 export default function PeoplePage() {
+  const leadershipTeam = team.filter(p => p.department === 'Leadership');
+  const plugin = React.useRef(
+    Autoplay({ delay: 2000, stopOnInteraction: true })
+  );
+
   return (
     <div className="container mx-auto px-4 py-16 md:py-24">
       <div data-aos="fade-up">
@@ -101,32 +104,48 @@ export default function PeoplePage() {
       </div>
 
        <section className="py-20 md:py-32">
-        <Heading className="text-center mb-12" data-aos="fade-up">Meet The Leadership</Heading>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
-            {team.filter(p => p.department === 'Leadership').map((person, index) => {
-            const personImage = PlaceHolderImages.find(p => p.id === person.imageId);
-            return (
-                <Card key={person.name} className="bg-secondary border-border/50 text-center transform transition-transform duration-300 hover:-translate-y-2 group" data-aos="fade-up" data-aos-delay={index * 100}>
-                <CardContent className="p-0">
-                    {personImage && (
-                    <Image
-                        src={personImage.imageUrl}
-                        alt={person.name}
-                        width={400}
-                        height={400}
-                        className="w-full h-auto object-cover grayscale group-hover:grayscale-0 transition-all duration-300"
-                        data-ai-hint={personImage.imageHint}
-                    />
-                    )}
-                    <div className="p-6">
-                    <h3 className="font-headline text-xl font-semibold uppercase tracking-wider text-white">{person.name}</h3>
-                    <p className="text-primary font-medium">{person.title}</p>
+        <Heading className="text-center mb-12 md:mb-16" data-aos="fade-up">Meet The Leadership</Heading>
+        <Carousel
+            plugins={[plugin.current]}
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+            className="w-full max-w-6xl mx-auto"
+            onMouseEnter={plugin.current.stop}
+            onMouseLeave={plugin.current.reset}
+            data-aos="fade-up"
+          >
+            <CarouselContent>
+              {leadershipTeam.map((person, index) => {
+                const personImage = PlaceHolderImages.find(p => p.id === person.imageId);
+                return (
+                  <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                    <div className="p-1">
+                      <Card className="bg-background border-border/50 overflow-hidden">
+                        <CardContent className="flex flex-col items-center p-6">
+                           {personImage && (
+                              <Image
+                                src={personImage.imageUrl}
+                                alt={person.name}
+                                width={144}
+                                height={224}
+                                className="w-36 h-56 rounded-[40px] object-cover mb-4 border-4 border-primary/20"
+                                data-ai-hint={personImage.imageHint}
+                              />
+                           )}
+                          <h3 className="font-headline text-xl font-semibold uppercase tracking-wider text-white mt-2">{person.name}</h3>
+                          <p className="text-primary font-medium">{person.title}</p>
+                        </CardContent>
+                      </Card>
                     </div>
-                </CardContent>
-                </Card>
-            );
-            })}
-        </div>
+                  </CarouselItem>
+                );
+              })}
+            </CarouselContent>
+            <CarouselPrevious className="hidden sm:flex" />
+            <CarouselNext className="hidden sm:flex" />
+          </Carousel>
       </section>
 
     </div>
