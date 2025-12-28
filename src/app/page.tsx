@@ -11,6 +11,7 @@ import { ArrowRight, DraftingCompass, Factory, Cpu, VenetianMask, Clapperboard, 
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
 import React from "react";
+import { TypewriterEffect } from "@/components/ui/typewriter-effect";
 
 const whatWeDo = [
     { title: "Creative Design & Engineering", icon: DraftingCompass },
@@ -72,6 +73,23 @@ export default function Home() {
               <Link href="/contact">Request a Quote</Link>
             </Button>
           </div>
+        </div>
+      </section>
+
+      {/* Video Section */}
+       <section className="relative h-96 w-full overflow-hidden">
+        <video
+          src="https://videos.pexels.com/video-files/4432060/4432060-hd_1920_1080_30fps.mp4"
+          autoPlay
+          loop
+          muted
+          className="absolute top-1/2 left-1/2 w-full h-full object-cover transform -translate-x-1/2 -translate-y-1/2"
+        />
+        <div className="absolute inset-0 bg-black/70 flex items-center justify-center">
+            <TypewriterEffect
+                text="We are a multidisciplinary creative and fabrication powerhouse, delivering turnkey solutions for entertainment, film, hospitality, retail, and corporate environments."
+                className="text-white text-2xl md:text-4xl font-bold text-center max-w-4xl px-4"
+            />
         </div>
       </section>
       
@@ -257,3 +275,5 @@ export default function Home() {
     </div>
   );
 }
+
+    
