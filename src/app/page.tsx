@@ -11,7 +11,7 @@ import { ArrowRight, DraftingCompass, Factory, Cpu, VenetianMask, Clapperboard, 
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
 import React from "react";
-import { TypewriterEffect } from "@/components/ui/typewriter-effect";
+import Typewriter from "typewriter-effect";
 
 const whatWeDo = [
     { title: "Creative Design & Engineering", icon: DraftingCompass },
@@ -87,11 +87,18 @@ export default function Home() {
           className="absolute top-1/2 left-1/2 w-full h-full object-cover transform -translate-x-1/2 -translate-y-1/2"
         />
         <div className="absolute inset-0 bg-black/70 flex items-center justify-center">
-            <TypewriterEffect
-                startOnView
-                text="We are a multidisciplinary creative and fabrication powerhouse, delivering turnkey solutions for entertainment, film, hospitality, retail, and corporate environments."
-                className="text-white text-2xl md:text-4xl font-bold text-center max-w-4xl px-4"
-            />
+            <div className="text-white text-2xl md:text-4xl font-bold text-center max-w-4xl px-4">
+              <Typewriter
+                options={{
+                  strings: [
+                    "We are a multidisciplinary creative and fabrication powerhouse, delivering turnkey solutions for entertainment, film, hospitality, retail, and corporate environments.",
+                  ],
+                  autoStart: true,
+                  loop: true,
+                  delay: 50,
+                }}
+              />
+            </div>
         </div>
       </section>
       
