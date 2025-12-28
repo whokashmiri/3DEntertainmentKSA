@@ -17,17 +17,19 @@ export const metadata: Metadata = {
 export default function ServicesPage() {
   return (
     <div className="container mx-auto px-4 py-16 md:py-24">
-      <Heading className="text-center mb-4">Our Services</Heading>
-      <p className="text-center text-muted-foreground text-lg max-w-3xl mx-auto mb-16">
-        We offer a comprehensive range of services to bring your vision to life, from initial concept to final installation. Our integrated approach ensures seamless execution and exceptional results.
-      </p>
+      <div data-aos="fade-up">
+        <Heading className="text-center mb-4">Our Services</Heading>
+        <p className="text-center text-muted-foreground text-lg max-w-3xl mx-auto mb-16">
+          We offer a comprehensive range of services to bring your vision to life, from initial concept to final installation. Our integrated approach ensures seamless execution and exceptional results.
+        </p>
+      </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {serviceCategories.map((category) => {
+        {serviceCategories.map((category, index) => {
           const categoryImage = PlaceHolderImages.find(p => p.id === category.imageId);
           const Icon = category.icon;
           return (
-            <Card key={category.title} className="bg-secondary border-border/50 flex flex-col">
+            <Card key={category.title} className="bg-secondary border-border/50 flex flex-col" data-aos="fade-up" data-aos-delay={index * 100}>
               <CardHeader>
                 {categoryImage && (
                     <div className="relative h-48 w-full rounded-md overflow-hidden">
@@ -63,7 +65,7 @@ export default function ServicesPage() {
         })}
       </div>
 
-      <div className="mt-24 md:mt-32">
+      <div className="mt-24 md:mt-32" data-aos="fade-up" data-aos-delay="200">
         <Heading className="text-center mb-4">Our Work</Heading>
         <p className="text-center text-muted-foreground text-lg max-w-3xl mx-auto mb-12">
             We take pride in our ability to transform complex challenges into tangible, high-quality results. Explore a selection of our projects across various industries.

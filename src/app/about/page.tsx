@@ -23,26 +23,26 @@ export default function AboutPage() {
 
     return (
         <div className="container mx-auto px-4 py-16 md:py-24">
-            <header className="text-center mb-16">
+            <header className="text-center mb-16" data-aos="fade-up">
                 <Heading>About 3D Entertainment Co.</Heading>
             </header>
 
             <section className="grid md:grid-cols-2 gap-12 items-center mb-24">
-                <div className="space-y-6">
+                <div className="space-y-6" data-aos="fade-right">
                     <h2 className="font-headline text-3xl font-semibold uppercase tracking-wider text-white">Who We Are</h2>
                     <p className="text-muted-foreground text-lg">
                         3D Entertainment Co. is a fully integrated creative and industrial fabrication company specializing in the design, engineering, and production of immersive environments.
                     </p>
                     <div className="grid grid-cols-2 gap-4">
                         {aboutImage1 && (
-                            <Image src={aboutImage1.imageUrl} alt={aboutImage1.description} width={300} height={200} className="rounded-lg object-cover" data-ai-hint={aboutImage1.imageHint}/>
+                            <Image src={aboutImage1.imageUrl} alt={aboutImage1.description} width={300} height={200} className="rounded-lg object-cover" data-ai-hint={aboutImage1.imageHint} data-aos="fade-up" data-aos-delay="100"/>
                         )}
                         {aboutImage2 && (
-                            <Image src={aboutImage2.imageUrl} alt={aboutImage2.description} width={300} height={200} className="rounded-lg object-cover" data-ai-hint={aboutImage2.imageHint}/>
+                            <Image src={aboutImage2.imageUrl} alt={aboutImage2.description} width={300} height={200} className="rounded-lg object-cover" data-ai-hint={aboutImage2.imageHint} data-aos="fade-up" data-aos-delay="200"/>
                         )}
                     </div>
                 </div>
-                 <div className="space-y-8">
+                 <div className="space-y-8" data-aos="fade-left">
                     <Card className="bg-secondary border-border/50">
                         <CardHeader>
                             <CardTitle className="font-headline text-2xl uppercase tracking-wider text-primary">Our Mission</CardTitle>
@@ -51,7 +51,7 @@ export default function AboutPage() {
                             <p className="text-muted-foreground">To deliver exceptional craftsmanship and creative solutions that turn ideas into immersive, memorable experiences.</p>
                         </CardContent>
                     </Card>
-                     <Card className="bg-secondary border-border/50">
+                     <Card className="bg-secondary border-border/50" data-aos="fade-left" data-aos-delay="100">
                         <CardHeader>
                             <CardTitle className="font-headline text-2xl uppercase tracking-wider text-primary">Our Vision</CardTitle>
                         </CardHeader>
@@ -62,14 +62,14 @@ export default function AboutPage() {
                 </div>
             </section>
 
-             <section className="mb-24">
+             <section className="mb-24" data-aos="fade-up">
                 <Card className="bg-secondary border-border/50">
                     <CardContent className="p-10 grid md:grid-cols-2 gap-10 items-center">
                         <div>
                              <h2 className="font-headline text-3xl font-semibold uppercase tracking-wider text-white mb-6">Our Core Values</h2>
                              <ul className="space-y-4">
-                                {coreValues.map(value => (
-                                    <li key={value} className="flex items-center gap-3">
+                                {coreValues.map((value, index) => (
+                                    <li key={value} className="flex items-center gap-3" data-aos="fade-right" data-aos-delay={index * 100}>
                                         <CheckCircle className="h-6 w-6 text-primary"/>
                                         <span className="text-lg text-white">{value}</span>
                                     </li>
@@ -89,10 +89,10 @@ export default function AboutPage() {
             <section>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     {aboutImage3 && (
-                        <Image src={aboutImage3.imageUrl} alt={aboutImage3.description} width={600} height={400} className="rounded-lg object-cover" data-ai-hint={aboutImage3.imageHint}/>
+                        <Image src={aboutImage3.imageUrl} alt={aboutImage3.description} width={600} height={400} className="rounded-lg object-cover" data-ai-hint={aboutImage3.imageHint} data-aos="fade-up"/>
                     )}
                     {aboutImage4 && (
-                        <Image src={aboutImage4.imageUrl} alt={aboutImage4.description} width={600} height={400} className="rounded-lg object-cover" data-ai-hint={aboutImage4.imageHint}/>
+                        <Image src={aboutImage4.imageUrl} alt={aboutImage4.description} width={600} height={400} className="rounded-lg object-cover" data-ai-hint={aboutImage4.imageHint} data-aos="fade-up" data-aos-delay="100"/>
                     )}
                 </div>
             </section>

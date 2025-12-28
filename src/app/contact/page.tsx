@@ -11,16 +11,18 @@ export default function ContactPage() {
     return (
     <>
       <div className="container mx-auto px-4 py-16 md:py-24">
-        <Heading className="text-center mb-4">Get In Touch</Heading>
-        <p className="text-center text-muted-foreground text-lg max-w-3xl mx-auto mb-16">
-          Have a project in mind, or need more information? We're ready to help. Reach out to us to start a conversation.
-        </p>
+        <div data-aos="fade-up">
+            <Heading className="text-center mb-4">Get In Touch</Heading>
+            <p className="text-center text-muted-foreground text-lg max-w-3xl mx-auto mb-16">
+              Have a project in mind, or need more information? We're ready to help. Reach out to us to start a conversation.
+            </p>
+        </div>
 
         <div className="grid md:grid-cols-5 gap-16">
-            <div className="md:col-span-3">
+            <div className="md:col-span-3" data-aos="fade-right">
                 <ContactForm />
             </div>
-            <div className="md:col-span-2">
+            <div className="md:col-span-2" data-aos="fade-left">
                 <div className="bg-secondary p-8 rounded-lg border border-border/50 h-full">
                     <h3 className="font-headline text-2xl font-semibold uppercase tracking-wider text-white mb-6">Contact Information</h3>
                     <div className="space-y-6">
@@ -67,7 +69,7 @@ export default function ContactPage() {
         </div>
       </div>
       {mapImage && (
-        <div className="w-full h-[400px] relative">
+        <div className="w-full h-[400px] relative" data-aos="fade-up">
             <Image
                 src={mapImage.imageUrl}
                 alt={mapImage.description}

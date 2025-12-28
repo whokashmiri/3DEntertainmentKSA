@@ -61,16 +61,18 @@ const departments = [
 export default function PeoplePage() {
   return (
     <div className="container mx-auto px-4 py-16 md:py-24">
-      <Heading className="text-center mb-4">Our People</Heading>
-      <p className="text-center text-muted-foreground text-lg max-w-3xl mx-auto mb-16">
-        Our strength comes from the people who imagine, design, engineer, and build extraordinary environments. We bring together artists, architects, engineers, programmers, and master craftsmen under one roof.
-      </p>
+      <div data-aos="fade-up">
+        <Heading className="text-center mb-4">Our People</Heading>
+        <p className="text-center text-muted-foreground text-lg max-w-3xl mx-auto mb-16">
+          Our strength comes from the people who imagine, design, engineer, and build extraordinary environments. We bring together artists, architects, engineers, programmers, and master craftsmen under one roof.
+        </p>
+      </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {departments.map((dept) => {
+        {departments.map((dept, index) => {
           const deptImage = PlaceHolderImages.find(p => p.id === dept.imageId);
           return (
-          <Card key={dept.title} className="bg-secondary border-border/50 flex flex-col">
+          <Card key={dept.title} className="bg-secondary border-border/50 flex flex-col" data-aos="fade-up" data-aos-delay={index * 100}>
             <CardHeader>
               {deptImage && (
                  <Image
@@ -99,12 +101,12 @@ export default function PeoplePage() {
       </div>
 
        <section className="py-20 md:py-32">
-        <Heading className="text-center mb-12">Meet The Leadership</Heading>
+        <Heading className="text-center mb-12" data-aos="fade-up">Meet The Leadership</Heading>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
-            {team.filter(p => p.department === 'Leadership').map((person) => {
+            {team.filter(p => p.department === 'Leadership').map((person, index) => {
             const personImage = PlaceHolderImages.find(p => p.id === person.imageId);
             return (
-                <Card key={person.name} className="bg-secondary border-border/50 text-center transform transition-transform duration-300 hover:-translate-y-2 group">
+                <Card key={person.name} className="bg-secondary border-border/50 text-center transform transition-transform duration-300 hover:-translate-y-2 group" data-aos="fade-up" data-aos-delay={index * 100}>
                 <CardContent className="p-0">
                     {personImage && (
                     <Image

@@ -81,16 +81,18 @@ const productSections = [
 export default function ProductsPage() {
   return (
     <div className="container mx-auto px-4 py-16 md:py-24">
-      <Heading className="text-center mb-4">Our Products</Heading>
-      <p className="text-center text-muted-foreground text-lg max-w-3xl mx-auto mb-16">
-        From large-scale steel structures to intricate custom furniture, our state-of-the-art facility produces a wide range of high-quality products.
-      </p>
+      <div data-aos="fade-up">
+        <Heading className="text-center mb-4">Our Products</Heading>
+        <p className="text-center text-muted-foreground text-lg max-w-3xl mx-auto mb-16">
+          From large-scale steel structures to intricate custom furniture, our state-of-the-art facility produces a wide range of high-quality products.
+        </p>
+      </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {productSections.map((section) => {
+        {productSections.map((section, index) => {
           const sectionImage = PlaceHolderImages.find(p => p.id === section.imageId);
           return (
-            <Card key={section.title} className="bg-secondary border-border/50 flex flex-col">
+            <Card key={section.title} className="bg-secondary border-border/50 flex flex-col" data-aos="fade-up" data-aos-delay={index * 100}>
               <CardHeader>
                 {sectionImage && (
                     <Image
