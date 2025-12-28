@@ -37,11 +37,6 @@ export function Footer() {
                   </Link>
                 </li>
               ))}
-               <li>
-                  <Link href="/admin/description-generator" className="text-muted-foreground hover:text-primary transition-colors">
-                    Admin Tools
-                  </Link>
-                </li>
             </ul>
           </div>
           <div>
