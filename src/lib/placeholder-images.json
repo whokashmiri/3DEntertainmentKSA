@@ -1,3 +1,5 @@
+
+
 {
   "placeholderImages": [
     {
@@ -69,37 +71,37 @@
     {
       "id": "person-1",
       "description": "Portrait of a male engineer in a factory.",
-      "imageUrl": "https://images.unsplash.com/photo-1581090700227-1e37b190418e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxlbmdpbmVlciUyMHBvcnRyYWl0fGVufDB8fHx8MTc2Njg2MjAzNnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/assets/team/person-1.jpg",
       "imageHint": "engineer portrait"
     },
     {
       "id": "person-2",
       "description": "Portrait of a female designer sketching.",
-      "imageUrl": "https://images.unsplash.com/photo-1654514433925-55871d633ada?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8ZGVzaWduZXIlMjBwb3J0cmFpdHxlbnwwfHx8fDE3NjY4NjA4NzJ8MA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/assets/team/person-2.jpg",
       "imageHint": "designer portrait"
     },
     {
       "id": "person-3",
       "description": "Portrait of a craftsman working with metal.",
-      "imageUrl": "https://images.unsplash.com/photo-1761753087548-5e4a7f2a6c0b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxjcmFmdHNtYW4lMjBwb3J0cmFpdHxlbnwwfHx8fDE3NjY4NjIwMzZ8MA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/assets/team/person-3.jpg",
       "imageHint": "craftsman portrait"
     },
     {
       "id": "person-4",
       "description": "Portrait of a project manager on site.",
-      "imageUrl": "https://images.unsplash.com/photo-1652711779351-a11e316b8d22?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8bWFuYWdlciUyMHBvcnRyYWl0fGVufDB8fHx8MTc2Njc5MzkzMXww&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/assets/team/person-4.jpg",
       "imageHint": "manager portrait"
     },
     {
       "id": "person-5",
       "description": "Portrait of a CNC operator.",
-      "imageUrl": "https://images.unsplash.com/photo-1575419262040-61aaba02f078?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxvcGVyYXRvciUyMHBvcnRyYWl0fGVufDB8fHx8MTc2Njg2MjAzNnww&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/assets/team/Rahaf Abdullah.png",
       "imageHint": "operator portrait"
     },
     {
       "id": "person-6",
       "description": "Portrait of a fabrication specialist.",
-      "imageUrl": "https://images.unsplash.com/photo-1601119462238-d7f347e41844?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxmYWJyaWNhdGlvbiUyMHNwZWNpYWxpc3R8ZW58MHx8fHwxNzY2ODYyMDM2fDA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/assets/team/person-6.jpg",
       "imageHint": "fabrication specialist"
     },
     {

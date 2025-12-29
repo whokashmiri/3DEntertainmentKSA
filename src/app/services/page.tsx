@@ -9,7 +9,7 @@ import type { Metadata } from "next";
 import { PortfolioGrid } from "../portfolio/components/portfolio-grid";
 
 export const metadata: Metadata = {
-    title: "Services & Portfolio | 3D Entertainment Co.",
+    title: "Services",
     description: "Our services include installations, special construction, CNC cutting, themed construction, and our animation studio in Saudi Arabia. Explore our portfolio of work.",
     keywords: "installation services Saudi, CNC cutting, themed construction, animation studio Saudi, fabrication portfolio",
 };

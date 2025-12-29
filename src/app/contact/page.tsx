@@ -4,6 +4,11 @@ import { Heading } from "@/components/ui/heading";
 import { ContactForm } from "./components/contact-form";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { Phone, Mail, MapPin, User } from "lucide-react";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "Contact",
+};
 
 export default function ContactPage() {
     const mapImage = PlaceHolderImages.find(p => p.id === "contact-map");

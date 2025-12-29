@@ -7,7 +7,7 @@ import { Check } from "lucide-react";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Products | 3D Entertainment Co.",
+    title: "Products",
     description: "Explore our range of custom-fabricated products, including steel structures, wood furniture, foam props, plastic components, composites, and signage.",
     keywords: "steel fabrication Saudi, wood CNC, foam sculpting, fiberglass molding, signage production",
 };

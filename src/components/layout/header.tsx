@@ -8,6 +8,9 @@ import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { cn } from "@/lib/utils";
 import { Menu, X, Factory } from "lucide-react";
+import NextImage from "next/image";
+import Logo from "../../../public/assets/Logo/Logo.webp";
+
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -27,7 +30,7 @@ export function Header() {
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center">
         <Link href="/" className="mr-6 flex items-center space-x-2">
-          <Factory className="h-6 w-6 text-primary" />
+          <NextImage src={Logo} alt="3D Entertainment Logo" className="h-6 w-6" />
           <span className="font-bold sm:inline-block font-headline uppercase tracking-widest">
             3D Entertainment
           </span>
@@ -58,7 +61,7 @@ export function Header() {
               <SheetContent side="right" className="w-[240px] bg-background">
                 <div className="flex justify-between items-center p-4 border-b">
                    <Link href="/" className="flex items-center space-x-2" onClick={() => setIsOpen(false)}>
-                    <Factory className="h-6 w-6 text-primary" />
+                    <NextImage src={Logo} alt="3D Entertainment Logo" className="h-6 w-6" />
                     <span className="font-bold font-headline uppercase tracking-widest">
                       3DE
                     </span>

@@ -7,7 +7,7 @@ import { PlaceHolderImages } from "@/lib/placeholder-images";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "About Us | 3D Entertainment Co.",
+    title: "About",
     description: "Learn about 3D Entertainment Co., a fully integrated creative and industrial fabrication company specializing in the design, engineering, and production of immersive environments in Saudi Arabia.",
     keywords: "fabrication company Saudi Arabia, themed environment design, creative studio Saudi, engineering and fabrication",
 };

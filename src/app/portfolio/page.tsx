@@ -1,6 +1,11 @@
 import { Heading } from "@/components/ui/heading";
 import { projects } from "@/lib/data";
 import { PortfolioGrid } from "./components/portfolio-grid";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "Portfolio",
+};
 
 export default function PortfolioPage() {
   return (

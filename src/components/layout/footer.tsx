@@ -1,6 +1,8 @@
 
 import Link from "next/link";
-import { Factory, Linkedin, Twitter, Instagram } from "lucide-react";
+import { Factory, Linkedin, Twitter, Instagram, Music2Icon } from "lucide-react";
+import NextImage from "next/image";
+import Logo from "../../../public/assets/Logo/Logo.webp";
 
 const navLinks = [
   { href: "/about", label: "About Us" },
@@ -18,7 +20,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="col-span-1 md:col-span-2">
             <Link href="/" className="flex items-center space-x-2 mb-4">
-              <Factory className="h-8 w-8 text-primary" />
+               <NextImage src={Logo} alt="3D Entertainment Logo" className="h-6 w-6" />
               <span className="text-xl font-bold sm:inline-block font-headline uppercase tracking-widest">
                 3D Entertainment Co.
               </span>
@@ -42,15 +44,15 @@ export function Footer() {
           <div>
              <h3 className="font-headline text-lg font-semibold uppercase tracking-wider text-white mb-4">Connect</h3>
             <div className="flex space-x-4">
-              <Link href="#" className="text-muted-foreground hover:text-primary transition-colors">
-                <Twitter className="h-6 w-6" />
-                <span className="sr-only">Twitter</span>
+              <Link href="https://www.tiktok.com/@3dentertainment.c" className="text-muted-foreground hover:text-primary transition-colors">
+                <Music2Icon className="h-6 w-6" />
+                <span className="sr-only">TikTok</span>
               </Link>
-              <Link href="#" className="text-muted-foreground hover:text-primary transition-colors">
+              <Link href="https://www.linkedin.com/company/3d-entertainment-co/" className="text-muted-foreground hover:text-primary transition-colors">
                 <Linkedin className="h-6 w-6" />
                 <span className="sr-only">LinkedIn</span>
               </Link>
-              <Link href="#" className="text-muted-foreground hover:text-primary transition-colors">
+              <Link href="https://www.instagram.com/3dentertainmentsa?igsh=dzh3NmM3ZGVkcHF4&utm_source=qr" className="text-muted-foreground hover:text-primary transition-colors">
                 <Instagram className="h-6 w-6" />
                 <span className="sr-only">Instagram</span>
               </Link>
