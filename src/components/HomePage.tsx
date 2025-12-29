@@ -91,7 +91,7 @@ export default function HomePage() {
               <Typewriter
                 options={{
                   strings: [
-                    "We are a multidisciplinary creative and fabrication powerhouse, delivering turnkey solutions for entertainment, film, hospitality, retail, and corporate environments.",
+                    "3D Entertainment Co. is a multidisciplinary creative and fabrication powerhouse based in Saudi Arabia. We unite artists, architects, engineers, programmers, and master craftsmen with one of the region’s most advanced manufacturing facilities — delivering turnkey solutions for entertainment, film, hospitality, retail, and corporate environments. ",
                   ],
                   autoStart: true,
                   loop: true,

@@ -37,7 +37,7 @@ export default function ContactPage() {
                             </div>
                             <div>
                                 <h4 className="font-semibold text-white">Contact Person</h4>
-                                <p className="text-muted-foreground">Aaqib</p>
+                                <p className="text-muted-foreground">Hammam Attar</p>
                             </div>
                         </div>
                         <div className="flex items-start gap-4">
