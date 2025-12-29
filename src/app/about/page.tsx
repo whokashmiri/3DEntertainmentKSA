@@ -19,7 +19,20 @@ export default function AboutPage() {
     const aboutImage3 = PlaceHolderImages.find(p => p.id === "about-sketch-1");
     const aboutImage4 = PlaceHolderImages.find(p => p.id === "about-drawing-1");
 
-    const coreValues = ["Excellence", "Collaboration", "Innovation"];
+    const coreValues = [
+        {
+            title: "Excellence",
+            description: "We deliver top‑quality design and fabrication, strengthened by the expertise of our international partners."
+        },
+        {
+            title: "Collaboration",
+            description: "We work closely with clients and global partners to bring every vision to life with clarity and precision."
+        },
+        {
+            title: "Innovation",
+            description: "We push creative boundaries by using advanced techniques and insights from our international collaborators."
+        }
+    ];
 
     return (
         <div className="container mx-auto px-4 py-16 md:py-24">
@@ -64,23 +77,20 @@ export default function AboutPage() {
 
              <section className="mb-24" data-aos="fade-up">
                 <Card className="bg-secondary border-border/50">
-                    <CardContent className="p-10 grid md:grid-cols-2 gap-10 items-center">
-                        <div>
-                             <h2 className="font-headline text-3xl font-semibold uppercase tracking-wider text-white mb-6">Our Core Values</h2>
-                             <ul className="space-y-4">
-                                {coreValues.map((value, index) => (
-                                    <li key={value} className="flex items-center gap-3" data-aos="fade-right" data-aos-delay={index * 100}>
-                                        <CheckCircle className="h-6 w-6 text-primary"/>
-                                        <span className="text-lg text-white">{value}</span>
-                                    </li>
-                                ))}
-                             </ul>
-                        </div>
-                        <div className="space-y-6">
-                            <h2 className="font-headline text-3xl font-semibold uppercase tracking-wider text-white">Our Creative Journey</h2>
-                            <p className="text-muted-foreground text-lg">
-                                From concept to completion, we turn ideas into exceptional realities. Our team blends creative vision with technical expertise to build immersive experiences that captivate and inspire.
-                            </p>
+                    <CardContent className="p-10">
+                        <h2 className="font-headline text-3xl font-semibold uppercase tracking-wider text-white mb-8 text-center">Our Core Values</h2>
+                        <div className="grid md:grid-cols-3 gap-8">
+                            {coreValues.map((value, index) => (
+                                <div key={value.title} data-aos="fade-up" data-aos-delay={index * 100} className="text-center">
+                                    <div className="flex justify-center mb-4">
+                                        <div className="p-3 bg-primary/10 rounded-full border-2 border-primary/30">
+                                            <CheckCircle className="h-8 w-8 text-primary"/>
+                                        </div>
+                                    </div>
+                                    <h3 className="text-xl font-bold text-white mb-2">{value.title}</h3>
+                                    <p className="text-muted-foreground">{value.description}</p>
+                                </div>
+                            ))}
                         </div>
                     </CardContent>
                 </Card>
