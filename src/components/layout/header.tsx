@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { usePathname } from "next/navigation";
 import { Button } from "@/components/ui/button";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { Sheet, SheetContent, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 import { cn } from "@/lib/utils";
 import { Menu, X, Factory } from "lucide-react";
 import NextImage from "next/image";
@@ -59,6 +59,7 @@ export function Header() {
                 </Button>
               </SheetTrigger>
               <SheetContent side="right" className="w-[240px] bg-background">
+                <SheetTitle className="sr-only">Navigation Menu</SheetTitle>
                 <div className="flex justify-between items-center p-4 border-b">
                    <Link href="/" className="flex items-center space-x-2" onClick={() => setIsOpen(false)}>
                     <NextImage src={Logo} alt="3D Entertainment Logo" className="h-6 w-6" />

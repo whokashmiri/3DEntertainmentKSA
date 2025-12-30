@@ -13,6 +13,7 @@ import Autoplay from "embla-carousel-autoplay";
 import React from "react";
 import Typewriter from "typewriter-effect";
 
+
 const whatWeDo = [
     { title: "Creative Design & Engineering", icon: DraftingCompass },
     { title: "Steel, Wood, Foam & Composite Fabrication", icon: Factory },
@@ -42,7 +43,7 @@ export default function HomePage() {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <section className="relative h-[80vh] w-full flex items-center justify-center text-center">
+      <section className="relative h-screen w-full flex items-center justify-center text-center">
         {heroImage && (
           <Image
             src={heroImage.imageUrl}
@@ -128,7 +129,7 @@ export default function HomePage() {
           </div>
           <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-4">
               <Image
-              src="https://picsum.photos/seed/11/600/400"
+              src="/assets/Extra/credit.jpeg"
               alt="Engineers at work"
               width={600}
               height={400}
@@ -137,7 +138,7 @@ export default function HomePage() {
               data-aos="fade-up"
             />
             <Image
-              src="https://picsum.photos/seed/12/600/400"
+              src="/assets/Extra/home_furniture.jpeg"
               alt="Creative design process"
               width={600}
               height={400}
@@ -146,7 +147,7 @@ export default function HomePage() {
               data-aos="fade-up" data-aos-delay="100"
             />
             <Image
-              src="https://picsum.photos/seed/13/600/400"
+              src="/assets/Extra/themeParks2.jpeg"
               alt="Fabrication in progress"
               width={600}
               height={400}

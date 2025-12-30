@@ -73,18 +73,16 @@ export default function ContactPage() {
             </div>
         </div>
       </div>
-      {mapImage && (
-        <div className="w-full h-[400px] relative" data-aos="fade-up">
-            <Image
-                src={mapImage.imageUrl}
-                alt={mapImage.description}
-                fill
-                className="object-cover"
-                data-ai-hint={mapImage.imageHint}
-            />
-            <div className="absolute inset-0 bg-black/50"></div>
-        </div>
-      )}
+      <div className="w-full h-[450px] relative" data-aos="fade-up">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3709.9175310923792!2d39.14178171032434!3d21.58914196821437!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15c3da87e12d03cb%3A0xaad451ac0b2c881f!2sSalama%20center!5e0!3m2!1sen!2ssa!4v1767114197374!5m2!1sen!2ssa"
+          width="100%"
+          height="100%"
+          style={{ border: 0 }}
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
     </>
   );
 }
