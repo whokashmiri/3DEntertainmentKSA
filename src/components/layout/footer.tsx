@@ -1,6 +1,6 @@
 
 import Link from "next/link";
-import { Factory, Linkedin, Twitter, Instagram, Music2Icon } from "lucide-react";
+import { Factory, Linkedin, Twitter, Instagram, Music2Icon, Mail, PhoneCallIcon, LocateIcon, Pin, PinOffIcon, LocateFixedIcon, MapPlusIcon, MapPinCheck } from "lucide-react";
 import NextImage from "next/image";
 import Logo from "../../../public/assets/Logo/Logo.webp";
 
@@ -41,9 +41,20 @@ export function Footer() {
               ))}
             </ul>
           </div>
+
+     
           <div>
              <h3 className="font-headline text-lg font-semibold uppercase tracking-wider text-white mb-4">Connect</h3>
-            <div className="flex space-x-4">
+                  <div className="flex flex-col text-sm">
+           <span className="text-muted-foreground mb-2"> <Mail  className="h-5 w-6 inline" /> info@3dentertainmentksa.com</span>
+            <span className="text-muted-foreground mb-2"> <PhoneCallIcon  className="h-5 w-6 inline " /> +966 122 751 997</span>
+
+            <span className="text-muted-foreground mb-2"> <PhoneCallIcon  className="h-5 w-6 inline" /> +966 537 399 808</span>
+
+             <span className="text-muted-foreground mb-2"> <MapPinCheck  className="h-5 w-6 inline" /> Salamah Center, Jeddah, Saudi Arabia</span>
+
+          </div>
+            <div className="flex space-x-4 m-3" >
               <Link href="https://www.tiktok.com/@3dentertainment.c" className="text-muted-foreground hover:text-primary transition-colors">
                 <Music2Icon className="h-6 w-6" />
                 <span className="sr-only">TikTok</span>

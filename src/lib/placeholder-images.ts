@@ -1,4 +1,4 @@
-import data from './placeholder-images.json';
+import { placeholderImagesData } from './placeholder-images-data';
 
 export type ImagePlaceholder = {
   id: string;
@@ -7,7 +7,7 @@ export type ImagePlaceholder = {
   imageHint: string;
 };
 
-const rawImages = data.placeholderImages;
+const rawImages = placeholderImagesData.placeholderImages;
 
 export const PlaceHolderImages: ImagePlaceholder[] = rawImages.map(img => {
   if (img.id === 'person-1') return { ...img, imageUrl: '/assets/team/Fares Jazar.jpeg' };

@@ -1,6 +1,4 @@
-
-
-{
+export const placeholderImagesData = {
   "placeholderImages": [
     {
       "id": "hero-background",
@@ -32,6 +30,12 @@
       "imageUrl": "https://images.unsplash.com/photo-1760466871156-37559e72b70c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjYXJib24lMjBmaWJlciUyMHBhcnR8ZW58MHx8fHwxNzY2ODYyMDM2fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "carbon fiber part"
     },
+     {
+      "id": "portfolio-project-0",
+      "description": "Complex engineering prototype for the aerospace industry.",
+      "imageUrl": "https://images.pexels.com/photos/34212916/pexels-photo-34212916.jpeg",
+      "imageHint": "aerospace prototype"
+    },
     {
       "id": "portfolio-project-5",
       "description": "Complex engineering prototype for the aerospace industry.",
@@ -47,7 +51,7 @@
     {
       "id": "tech-machine-1",
       "description": "A large 5-axis CNC machine.",
-      "imageUrl": "https://images.unsplash.com/photo-1607385404764-380a5e06c7fe?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxsYXJnZSUyMGNuY3xlbnwwfHx8fDE3NjY4NjIwMzd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.pexels.com/photos/10406128/pexels-photo-10406128.jpeg",
       "imageHint": "large cnc"
     },
     {
@@ -155,7 +159,7 @@
     {
       "id": "product-plastic",
       "description": "A stack of clear, vacuum-formed plastic parts.",
-      "imageUrl": "https://images.pexels.com/photos/4177222/pexels-photo-4177222.jpeg",
+      "imageUrl": "https://images.pexels.com/photos/8049843/pexels-photo-8049843.jpeg",
       "imageHint": "vacuum forming"
     },
     {
@@ -171,4 +175,4 @@
       "imageHint": "led sign"
     }
   ]
-}
+};

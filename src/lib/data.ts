@@ -122,7 +122,7 @@ export const serviceCategories: ServiceCategory[] = [
             "Interactive installations",
             "Control systems & automation",
         ],
-        imageId: "portfolio-project-5",
+        imageId: "portfolio-project-0",
         icon: CircuitBoard,
     },
 ];
@@ -284,32 +284,32 @@ export type TeamMember = {
 
 export const team: TeamMember[] = [
   {
-    name: "Abdullah Al-Fahd",
-    title: "Chief Executive Officer",
+    name: "Fares Jazar",
+    title: "Administrative Affairs & Business Development",
     department: "Leadership",
     imageId: "person-1",
   },
   {
-    name: "Fatima Al-Jamil",
-    title: "Head of Design",
+    name: "Hadeel Sabawi",
+    title: "Designer & Architecture",
     department: "Design",
     imageId: "person-2",
   },
   {
-    name: "Yusuf Ibrahim",
-    title: "Lead Fabrication Specialist",
+    name: "Rahaf Abdullah",
+    title: "Designer & Architecture",
     department: "Fabrication",
     imageId: "person-3",
   },
   {
-    name: "Omar Khalid",
-    title: "Director of Engineering",
+    name: "Hammam Attar",
+    title: "CEO & Civil Engineer",
     department: "Engineering",
     imageId: "person-4",
   },
   {
-    name: "Layla Hassan",
-    title: "Senior CNC Programmer",
+    name: "Hamada Abaaza",
+    title: "Production Manager & Industrial Engineer",
     department: "Engineering",
     imageId: "person-5",
   },
