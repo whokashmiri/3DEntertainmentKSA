@@ -291,13 +291,13 @@ export const team: TeamMember[] = [
   },
   {
     name: "Hadeel Sabawi",
-    title: "Designer & Architecture",
+    title: "Designer & Architect",
     department: "Design",
     imageId: "person-2",
   },
   {
     name: "Rahaf Abdullah",
-    title: "Designer & Architecture",
+    title: "Designer & Architect",
     department: "Fabrication",
     imageId: "person-3",
   },
