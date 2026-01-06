@@ -6,7 +6,7 @@ import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { Check, Dot } from "lucide-react";
 import type { Metadata } from "next";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { Card, CardContent } from "@/components/ui/card";
+import { Card } from "@/components/ui/card";
 
 export const metadata: Metadata = {
     title: "Services",
@@ -32,10 +32,10 @@ export default function ServicesPage() {
                  return (
                     <AccordionItem value={`item-${index}`} key={service.title} className="border-b-0">
                          <Card className="bg-secondary border-border/50 overflow-hidden">
-                             <AccordionTrigger className="p-6 text-left hover:no-underline">
+                             <AccordionTrigger className="p-6 text-left hover:no-underline group">
                                 <div className="flex items-center gap-4 md:gap-6 w-full">
-                                    <div className="p-3 bg-primary/10 rounded-md border-2 border-primary/20 hidden md:block">
-                                        <Icon className="w-8 h-8 text-primary" />
+                                    <div className="p-3 bg-background group-hover:bg-primary/10 rounded-md border-2 border-primary/20 transition-colors duration-300">
+                                        <Icon className="w-8 h-8 text-primary transition-colors duration-300" />
                                     </div>
                                     <div className="flex-grow">
                                         <h3 className="font-headline text-2xl md:text-3xl font-semibold uppercase tracking-wider text-white">{service.title}</h3>
@@ -44,7 +44,7 @@ export default function ServicesPage() {
                              </AccordionTrigger>
                              <AccordionContent className="p-0">
                                 <div className="grid md:grid-cols-5 gap-0">
-                                    <div className="md:col-span-2">
+                                    <div className="md:col-span-2 hidden md:block">
                                         {serviceImage && (
                                             <Image
                                                 src={serviceImage.imageUrl}
@@ -57,27 +57,29 @@ export default function ServicesPage() {
                                         )}
                                     </div>
                                     <div className="md:col-span-3 p-6 md:p-8 space-y-6">
-                                        <div>
-                                            <h4 className="font-bold text-lg text-primary mb-2">Scope of Work</h4>
-                                            <ul className="space-y-1.5">
-                                                {service.scope.map(item => (
-                                                    <li key={item} className="flex items-start gap-2">
-                                                        <Dot className="h-5 w-5 text-primary/70 mt-0.5 shrink-0" />
-                                                        <span className="text-muted-foreground">{item}</span>
-                                                    </li>
-                                                ))}
-                                            </ul>
-                                        </div>
-                                         <div>
-                                            <h4 className="font-bold text-lg text-primary mb-2">Process & Workflow</h4>
-                                            <ul className="space-y-1.5">
-                                                {service.process.map(item => (
-                                                    <li key={item} className="flex items-start gap-2">
-                                                        <Dot className="h-5 w-5 text-primary/70 mt-0.5 shrink-0" />
-                                                        <span className="text-muted-foreground">{item}</span>
-                                                    </li>
-))}
-                                            </ul>
+                                        <div className="grid sm:grid-cols-2 gap-6">
+                                            <div>
+                                                <h4 className="font-bold text-lg text-primary mb-2">Scope of Work</h4>
+                                                <ul className="space-y-1.5">
+                                                    {service.scope.map(item => (
+                                                        <li key={item} className="flex items-start gap-2">
+                                                            <Dot className="h-5 w-5 text-primary/70 mt-0.5 shrink-0" />
+                                                            <span className="text-muted-foreground">{item}</span>
+                                                        </li>
+                                                    ))}
+                                                </ul>
+                                            </div>
+                                             <div>
+                                                <h4 className="font-bold text-lg text-primary mb-2">Process & Workflow</h4>
+                                                <ul className="space-y-1.5">
+                                                    {service.process.map(item => (
+                                                        <li key={item} className="flex items-start gap-2">
+                                                            <Dot className="h-5 w-5 text-primary/70 mt-0.5 shrink-0" />
+                                                            <span className="text-muted-foreground">{item}</span>
+                                                        </li>
+                                                    ))}
+                                                </ul>
+                                            </div>
                                         </div>
                                          <div>
                                             <h4 className="font-bold text-lg text-primary mb-2">Capability</h4>
