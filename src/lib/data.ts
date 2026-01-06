@@ -127,6 +127,239 @@ export const serviceCategories: ServiceCategory[] = [
     },
 ];
 
+export type ExpandedService = {
+  title: string;
+  icon: LucideIcon;
+  imageId: string;
+  scope: string[];
+  process: string[];
+  capability: string[];
+  value: string[];
+};
+
+export const expandedServices: ExpandedService[] = [
+  {
+    title: "Design & Engineering",
+    icon: PenTool,
+    imageId: "about-drawing-1",
+    scope: [
+      "Architectural & interior design",
+      "Concept, character & scenic design",
+      "Structural & MEP engineering",
+      "Industrial & product design",
+      "Shop drawings & fabrication planning",
+    ],
+    process: [
+      "Client brief & requirements gathering",
+      "Conceptualization & mood boarding",
+      "3D modeling & visualization",
+      "Engineering analysis & simulation",
+      "Prototyping & design validation",
+      "Detailed shop drawings for production",
+    ],
+    capability: [
+      "Team of architects, artists, and engineers",
+      "Advanced CAD/CAM software (AutoCAD, Revit, SolidWorks)",
+      "FEA & structural analysis tools",
+      "Partnerships with specialized design firms",
+    ],
+    value: [
+      "Integrated design-to-fabrication workflow",
+      "Creative solutions grounded in technical feasibility",
+      "Reduced project risk through early-stage engineering",
+      "Optimized designs for manufacturability and cost-efficiency",
+    ],
+  },
+  {
+    title: "E-Production",
+    icon: ScanLine,
+    imageId: "tech-machine-4",
+    scope: [
+        "High-fidelity 3D scanning (object & environment)",
+        "Reverse engineering from physical objects",
+        "Digital model cleanup and optimization",
+        "Virtual reality (VR) pre-visualization",
+        "Rapid prototyping via 3D printing",
+    ],
+    process: [
+        "On-site or in-house scanning with laser/structured light scanners",
+        "Processing point cloud data into a usable 3D mesh",
+        "CAD modeling based on scan data for reverse engineering",
+        "Creating immersive VR environments for design review",
+        "Fabricating scale models and prototypes using a 3D printer farm",
+    ],
+    capability: [
+        "High-resolution 3D scanners (Artec, Faro)",
+        "Full-color 3D printer farm",
+        "Powerful workstations for data processing",
+        "Expertise in digital sculpting and modeling software (ZBrush, Blender)",
+    ],
+    value: [
+        "Accelerates the design and iteration process",
+        "Ensures perfect fit and integration with existing structures",
+        "Enables collaborative design reviews in a virtual space",
+        "Bridges the gap between physical and digital worlds",
+    ],
+  },
+  {
+    title: "Animation, VFX & Content",
+    icon: Clapperboard,
+    imageId: "about-sketch-1",
+    scope: [
+      "3D character & environmental animation",
+      "Motion graphics for branding and events",
+      "Visual effects (VFX) for film and media",
+      "Custom content for projection mapping",
+      "Interactive media and game development",
+    ],
+    process: [
+      "Storyboarding and animatics",
+      "Asset creation (modeling, texturing, rigging)",
+      "Animation and motion capture",
+      "Compositing, rendering, and post-production",
+      "Content calibration for specific displays and surfaces",
+    ],
+    capability: [
+      "In-house animation and VFX studio",
+      "Render farm for high-volume production",
+      "Industry-standard software (Maya, Houdini, After Effects)",
+      "Team of animators, VFX artists, and creative directors",
+    ],
+    value: [
+      "Engaging digital storytelling that captivates audiences",
+      "Seamless integration of digital content with physical environments",
+      "Full-service pipeline from concept to final render",
+      "High-quality visual content for any screen or surface",
+    ],
+  },
+  {
+    title: "Machining & Cutting",
+    icon: Cpu,
+    imageId: "tech-machine-1",
+    scope: [
+      "Multi-axis CNC milling and turning",
+      "Large-format CNC routing for wood, foam, and plastics",
+      "High-power laser cutting for metal plates and pipes",
+      "CNC plasma and waterjet cutting",
+      "Precision drilling, tapping, and bending",
+    ],
+    process: [
+      "CAM programming from digital models",
+      "Material selection and preparation",
+      "Automated machining and cutting operations",
+      "In-process quality control and tolerance checks",
+      "Deburring and initial finishing",
+    ],
+    capability: [
+      "40 kW CNC plate laser, CNC I-section & pipe laser",
+      "5-axis & 4-axis carving machines, large-format routers",
+      "CNC turning/milling centers",
+      "Framecad LGS line for light-gauge steel",
+      "CNC bending, drilling, and tapping machines",
+    ],
+    value: [
+      "Unmatched precision and repeatability",
+      "Ability to produce highly complex geometries",
+      "Fast turnaround times for custom parts",
+      "Efficient processing of a wide range of materials",
+    ],
+  },
+  {
+    title: "Coating & Cladding",
+    icon: PaintRoller,
+    imageId: "tech-machine-2",
+    scope: [
+      "Protective polyurea and hard-shell coatings",
+      "Architectural metal cladding and paneling",
+      "Decorative and protective powder coating",
+      "Wood veneer pressing and film lamination",
+      "Scenic painting and artistic finishing",
+    ],
+    process: [
+      "Surface preparation (sanding, blasting, cleaning)",
+      "Automated or manual application of coatings",
+      "Curing in controlled environments (ovens, drying rooms)",
+      "Multi-layer application for specific finishes",
+      "Quality inspection for thickness, adhesion, and appearance",
+    ],
+    capability: [
+      "Automated powder-coating line",
+      "Polyurea and hard-coating spray systems",
+      "Large-scale paint booths with ventilation",
+      "Veneer and vacuum presses",
+      "Team of skilled painters and finishing artists",
+    ],
+    value: [
+      "Enhanced durability and weather resistance",
+      "Wide range of aesthetic finishes, from industrial to artistic",
+      "Consistent quality across large surfaces and multiple parts",
+      "Specialized coatings for themed environments and high-wear applications",
+    ],
+  },
+  {
+    title: "Installation & Special Construction",
+    icon: Wrench,
+    imageId: "portfolio-project-2",
+    scope: [
+      "Full-service, on-site installation and assembly",
+      "Turnkey construction of themed environments and scenic elements",
+      "Rigging and installation of large-scale structures and artworks",
+      "Integration of mechanical, electrical, and lighting systems",
+      "Project management and site supervision",
+    ],
+    process: [
+      "Pre-installation site survey and planning",
+      "Logistics and transportation of fabricated components",
+      "Systematic assembly according to installation drawings",
+      "Coordination with other trades and general contractors",
+      "Final commissioning and client handover",
+    ],
+    capability: [
+      "Experienced teams of on-site installers and technicians",
+      "Mobile equipment (cranes, lifts, welding units)",
+      "Certified riggers and safety officers",
+      "Expertise in complex, multi-component installations",
+    ],
+    value: [
+      "Seamless transition from factory to final location",
+      "Single point of responsibility for the entire project lifecycle",
+      "Safe and efficient on-site execution",
+      "Guaranteed quality from fabrication through to final installation",
+    ],
+  },
+  {
+    title: "Electronics & Programming",
+    icon: CircuitBoard,
+    imageId: "portfolio-project-0",
+    scope: [
+      "Custom LED lighting design and integration",
+      "PLC programming for automated motion and show control",
+      "Development of interactive exhibits and installations",
+      "Integration of sensors, motors, and actuators",
+      "Bespoke software development for control systems",
+    ],
+    process: [
+      "System architecture design and component selection",
+      "Circuit board design and assembly",
+      "Software and firmware programming",
+      "Bench testing and system integration",
+      "On-site calibration and user training",
+    ],
+    capability: [
+      "In-house electronics lab and programmers",
+      "Expertise in PLC, Arduino, and Raspberry Pi platforms",
+      "Knowledge of DMX, Art-Net, and other control protocols",
+      "Ability to integrate a wide range of electronic components",
+    ],
+    value: [
+      "Brings static environments to life with light, sound, and motion",
+      "Creates engaging and memorable interactive experiences",
+      "Reliable and robust control systems for complex shows",
+      "Custom solutions tailored to specific creative and functional needs",
+    ],
+  },
+];
+
 
 export type Project = {
   title: string;
