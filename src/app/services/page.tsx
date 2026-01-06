@@ -10,7 +10,7 @@ import { Card } from "@/components/ui/card";
 import { PortfolioGrid } from "../portfolio/components/portfolio-grid";
 
 export const metadata: Metadata = {
-    title: "Services & Portfolio",
+    title: "Services & Portfolio | 3D Entertainment Co.",
     description: "Explore our comprehensive services including Design, Engineering, E-Production, Animation, Machining, Coating, Installation, and Electronics. We provide turnkey solutions from concept to reality, and showcase our featured work.",
     keywords: "full-service fabrication, design and engineering, CNC machining, themed environment construction, animation studio, installation services Saudi Arabia, fabrication portfolio",
 };
@@ -19,9 +19,9 @@ export default function ServicesPage() {
   return (
     <div className="container mx-auto px-4 py-16 md:py-24">
       <div data-aos="fade-up">
-        <Heading className="text-center mb-4">Our Services</Heading>
+        <Heading className="text-center mb-4">Our Integrated Services</Heading>
         <p className="text-center text-muted-foreground text-lg max-w-3xl mx-auto mb-16">
-          We offer a comprehensive range of services to bring your vision to life, from initial concept to final installation. Our integrated approach ensures seamless execution and exceptional results.
+          We offer a comprehensive range of services to bring your vision to life, from initial concept to final installation. Our integrated approach ensures seamless execution and exceptional results, demonstrating a clear link from design and engineering through to fabrication and installation.
         </p>
       </div>
 

@@ -7,9 +7,9 @@ import { PlaceHolderImages } from "@/lib/placeholder-images";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "About",
+    title: "About | 3D Entertainment Co.",
     description: "Learn about 3D Entertainment Co., a fully integrated creative and industrial fabrication company specializing in the design, engineering, and production of immersive environments in Saudi Arabia.",
-    keywords: "fabrication company Saudi Arabia, themed environment design, creative studio Saudi, engineering and fabrication",
+    keywords: "fabrication company Saudi Arabia, themed environment design, creative studio Saudi, engineering and fabrication, immersive experiences",
 };
 
 
@@ -44,7 +44,7 @@ export default function AboutPage() {
                 <div className="space-y-6" data-aos="fade-right">
                     <h2 className="font-headline text-3xl font-semibold uppercase tracking-wider text-white">Who We Are</h2>
                     <p className="text-muted-foreground text-lg">
-                        3D Entertainment Co. is a fully integrated creative and industrial fabrication company specializing in the design, engineering, and production of immersive environments.
+                        3D Entertainment Co. is a fully integrated creative and industrial fabrication company specializing in the design, engineering, and production of immersive environments. Based in Saudi Arabia, we are a multidisciplinary powerhouse uniting artists, architects, engineers, and master craftsmen to deliver turnkey solutions for the entertainment, film, hospitality, and corporate sectors.
                     </p>
                     <div className="grid grid-cols-2 gap-4">
                         {aboutImage1 && (

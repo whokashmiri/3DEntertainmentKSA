@@ -7,7 +7,9 @@ import { Phone, Mail, MapPin, User } from "lucide-react";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Contact",
+    title: "Contact Us | 3D Entertainment Co.",
+    description: "Get in touch with 3D Entertainment Co. for a quote on your project. Contact us for creative design, engineering, and fabrication services in Saudi Arabia.",
+    keywords: "contact fabrication company, request a quote, engineering services contact, creative design Saudi Arabia, Jeddah fabrication",
 };
 
 export default function ContactPage() {
@@ -19,7 +21,7 @@ export default function ContactPage() {
         <div data-aos="fade-up">
             <Heading className="text-center mb-4">Get In Touch</Heading>
             <p className="text-center text-muted-foreground text-lg max-w-3xl mx-auto mb-16">
-              Have a project in mind, or need more information? We're ready to help. Reach out to us to start a conversation.
+              Have a project in mind, or need more information? We're ready to help. Reach out to us to start a conversation about your creative, engineering, or fabrication needs. We provide comprehensive quotes for projects of all scales.
             </p>
         </div>
 

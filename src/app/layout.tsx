@@ -9,6 +9,12 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const oswald = Oswald({ subsets: ["latin"], variable: "--font-oswald" });
 
 export const metadata: Metadata = {
+  title: {
+    default: "3D Entertainment Co. | Creative Fabrication & Advanced Manufacturing",
+    template: "%s | 3D Entertainment Co.",
+  },
+  description: "Pioneering Saudi Industrial Leadership in Creative Fabrication and Advanced Manufacturing. We offer turnkey solutions in design, engineering, and production for immersive environments.",
+  keywords: "Creative Fabrication, Advanced Manufacturing, Saudi Arabia, 3D Entertainment, Themed Environments, CNC Machining, Steel Fabrication, Engineering Services",
   icons: {
     icon: '/Logo.webp',
   },

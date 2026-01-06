@@ -7,9 +7,9 @@ import { Check } from "lucide-react";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Products",
-    description: "Explore our range of custom-fabricated products, including steel structures, wood furniture, foam props, plastic components, composites, and signage.",
-    keywords: "steel fabrication Saudi, wood CNC, foam sculpting, fiberglass molding, signage production",
+    title: "Our Products | 3D Entertainment Co.",
+    description: "Explore our range of custom-fabricated products, including pre-engineered steel structures, CNC-carved wood furniture, complex foam props, vacuum-formed plastic components, advanced composites, and large-format signage.",
+    keywords: "steel fabrication Saudi, wood CNC, foam sculpting, fiberglass molding, custom signage production, LGS structures, carbon fiber parts",
 };
 
 const productSections = [
@@ -84,7 +84,7 @@ export default function ProductsPage() {
       <div data-aos="fade-up">
         <Heading className="text-center mb-4">Our Products</Heading>
         <p className="text-center text-muted-foreground text-lg max-w-3xl mx-auto mb-16">
-          From large-scale steel structures to intricate custom furniture, our state-of-the-art facility produces a wide range of high-quality products.
+          From large-scale steel structures to intricate custom furniture, our state-of-the-art facility produces a wide range of high-quality products. Our integrated manufacturing process ensures that every item, whether metal, wood, or composite, is built to precise specifications and finished to the highest standards.
         </p>
       </div>
 
