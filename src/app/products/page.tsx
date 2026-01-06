@@ -1,10 +1,12 @@
 
 import Image from "next/image";
+import Link from "next/link";
 import { Heading } from "@/components/ui/heading";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { Check } from "lucide-react";
 import type { Metadata } from "next";
+import { Button } from "@/components/ui/button";
 
 export const metadata: Metadata = {
     title: "Our Products | 3D Entertainment Co.",
@@ -80,6 +82,7 @@ const productSections = [
 
 export default function ProductsPage() {
   return (
+    <>
     <div className="container mx-auto px-4 py-16 md:py-24">
       <div data-aos="fade-up">
         <Heading className="text-center mb-4">Our Products</Heading>
@@ -121,5 +124,15 @@ export default function ProductsPage() {
         })}
       </div>
     </div>
+    <section className="bg-background">
+      <div className="container mx-auto px-4 py-20 text-center" data-aos="fade-up">
+          <h2 className="font-headline text-4xl font-bold uppercase tracking-wider text-white">Need a custom fabricated product?</h2>
+          <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">We can build it. Tell us about your project requirements and let's get started.</p>
+          <Button asChild size="lg" className="mt-8 font-bold tracking-wide text-lg py-6 px-10">
+              <Link href="/contact">Request a Quote</Link>
+          </Button>
+      </div>
+    </section>
+  </>
   );
 }

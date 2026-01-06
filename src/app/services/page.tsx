@@ -1,5 +1,6 @@
 
 import Image from "next/image";
+import Link from "next/link";
 import { Heading } from "@/components/ui/heading";
 import { expandedServices, projects } from "@/lib/data";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
@@ -7,6 +8,7 @@ import { Check, Dot } from "lucide-react";
 import type { Metadata } from "next";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Card } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 import { PortfolioGrid } from "../portfolio/components/portfolio-grid";
 
 export const metadata: Metadata = {
@@ -17,6 +19,7 @@ export const metadata: Metadata = {
 
 export default function ServicesPage() {
   return (
+    <>
     <div className="container mx-auto px-4 py-16 md:py-24">
       <div data-aos="fade-up">
         <Heading className="text-center mb-4">Our Integrated Services</Heading>
@@ -126,5 +129,15 @@ export default function ServicesPage() {
           </div>
        </div>
     </div>
+     <section className="bg-secondary">
+        <div className="container mx-auto px-4 py-20 text-center" data-aos="fade-up">
+            <h2 className="font-headline text-4xl font-bold uppercase tracking-wider text-white">Have a project in mind?</h2>
+            <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">Our team is ready to help you with your creative, engineering, and fabrication needs. Let's build something extraordinary together.</p>
+            <Button asChild size="lg" className="mt-8 font-bold tracking-wide text-lg py-6 px-10">
+                <Link href="/contact">Request a Quote</Link>
+            </Button>
+        </div>
+      </section>
+    </>
   );
 }

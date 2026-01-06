@@ -279,9 +279,9 @@ export default function HomePage() {
       {/* CTA Section */}
       <section className="bg-background">
         <div className="container mx-auto px-4 py-20 text-center" data-aos="fade-up">
-            <h2 className="font-headline text-4xl font-bold uppercase tracking-wider text-white">Ready to build the future?</h2>
-            <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">Let's discuss how our advanced manufacturing and creative design capabilities can bring your vision to life.</p>
-            <Button asChild size="lg" className="mt-8 font-bold tracking-wide text-lg">
+            <h2 className="font-headline text-4xl font-bold uppercase tracking-wider text-white">Ready to bring your vision to life?</h2>
+            <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">Let's discuss how our advanced manufacturing and creative design capabilities can make it happen.</p>
+            <Button asChild size="lg" className="mt-8 font-bold tracking-wide text-lg py-6 px-10">
                 <Link href="/contact">Request a Quote</Link>
             </Button>
         </div>
