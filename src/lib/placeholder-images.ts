@@ -15,6 +15,6 @@ export const PlaceHolderImages: ImagePlaceholder[] = rawImages.map(img => {
   if (img.id === 'person-3') return { ...img, imageUrl: '/assets/team/Rahaf Abdullah.png' };
   if (img.id === 'person-4') return { ...img, imageUrl: '/assets/team/Hammam Attar.jpeg' };
   if (img.id === 'person-5') return { ...img, imageUrl: '/assets/team/Hamada Abaaz.jpeg' };
-  // if (img.id === 'person-6') return { ...img, imageUrl: '/assets/team/person-6.jpg' };
+  if (img.id === 'person-6') return { ...img, imageUrl: '/assets/team/Khalid Rahman.jpeg' };
   return img;
 });

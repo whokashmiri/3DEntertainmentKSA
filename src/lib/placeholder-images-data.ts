@@ -14,9 +14,9 @@ export const placeholderImagesData = {
     },
     {
       "id": "portfolio-project-2",
-      "description": "A custom-fabricated architectural element made of steel.",
-      "imageUrl": "https://images.unsplash.com/photo-1764422680747-589446d57ccf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxhcmNoaXRlY3R1cmFsJTIwZGV0YWlsfGVufDB8fHx8MTc2Njg2MjAzN3ww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "architectural detail"
+      "description": "A team of workers installing a large architectural facade.",
+      "imageUrl": "https://images.pexels.com/photos/2228561/pexels-photo-2228561.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "imageHint": "architectural installation"
     },
     {
       "id": "portfolio-project-3",
@@ -32,9 +32,9 @@ export const placeholderImagesData = {
     },
      {
       "id": "portfolio-project-0",
-      "description": "Complex engineering prototype for the aerospace industry.",
-      "imageUrl": "https://images.pexels.com/photos/34212916/pexels-photo-34212916.jpeg",
-      "imageHint": "aerospace prototype"
+      "description": "A programmer working with complex code on a screen.",
+      "imageUrl": "https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "imageHint": "electronics programming"
     },
     {
       "id": "portfolio-project-5",
@@ -45,20 +45,20 @@ export const placeholderImagesData = {
     {
       "id": "portfolio-project-6",
       "description": "A set of large gears for industrial machinery.",
-      "imageUrl": "https://images.unsplash.com/photo-1738918908796-b02a5de5bdae?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxpbmR1c3RyaWFsJTIwZ2VhcnN8ZW58MHx8fHwxNzY2ODYyMDM2fDA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1738918908796-b02a5de5bdae?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxpbmR1c3RyaWFsJTIwZ2VhcnN8ZW58MHx8fHwxNzY2ODYyMDM2fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "industrial gears"
     },
     {
       "id": "tech-machine-1",
-      "description": "A large 5-axis CNC machine.",
+      "description": "A large 5-axis CNC machine in operation.",
       "imageUrl": "https://images.pexels.com/photos/10406128/pexels-photo-10406128.jpeg",
       "imageHint": "large cnc"
     },
     {
       "id": "tech-machine-2",
-      "description": "A high-power laser cutter in action.",
-      "imageUrl": "https://images.unsplash.com/photo-1615378809683-6737a9e362f2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxsYXNlciUyMGN1dHRlcnxlbnwwfHx8fDE3NjY4NjIwMzZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "laser cutter"
+      "description": "A professional applying a protective coating in a paint booth.",
+      "imageUrl": "https://images.pexels.com/photos/8343118/pexels-photo-8343118.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "imageHint": "industrial coating"
     },
     {
       "id": "tech-machine-3",
@@ -68,9 +68,9 @@ export const placeholderImagesData = {
     },
     {
       "id": "tech-machine-4",
-      "description": "A 3D printer for large-scale composite manufacturing.",
-      "imageUrl": "https://images.unsplash.com/photo-1741517540162-451e3f5d6318?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHwzZCUyMHByaW50ZXIlMjBjb21wb3NpdGV8ZW58MHx8fHwxNzY2ODYyMDM2fDA&ixlib.rb-4.1.0&q=80&w=1080",
-      "imageHint": "3d printer composite"
+      "description": "A high-resolution 3D scanner capturing an object.",
+      "imageUrl": "https://images.pexels.com/photos/7174431/pexels-photo-7174431.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "imageHint": "3d scanning"
     },
     {
       "id": "person-1",
@@ -128,9 +128,9 @@ export const placeholderImagesData = {
     },
     {
       "id": "about-sketch-1",
-      "description": "Creative sketches and designs on a whiteboard.",
-      "imageUrl": "https://images.pexels.com/photos/5582597/pexels-photo-5582597.jpeg",
-      "imageHint": "creative sketch"
+      "description": "A screen showing a complex 3D animation wireframe render.",
+      "imageUrl": "https://images.pexels.com/photos/326508/pexels-photo-326508.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "imageHint": "3d animation vfx"
     },
     {
       "id": "about-drawing-1",
@@ -141,7 +141,7 @@ export const placeholderImagesData = {
     {
       "id": "product-steel",
       "description": "Fabricated steel beams in a workshop.",
-      "imageUrl": "https://images.unsplash.com/photo-1648671921845-895549805092?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxzdGVlbCUyMGZhYnJpY2F0aW9ufGVufDB8fHx8MTc2Njg2NDA2MXww&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1648671921845-895549805092?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxzdGVlbCUyMGZhYnJpY2F0aW9ufGVufDB8fHx8MTc2Njg2NDA2MXww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "steel fabrication"
     },
     {
