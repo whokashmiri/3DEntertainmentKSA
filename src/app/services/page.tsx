@@ -1,17 +1,18 @@
 
 import Image from "next/image";
 import { Heading } from "@/components/ui/heading";
-import { expandedServices } from "@/lib/data";
+import { expandedServices, projects } from "@/lib/data";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { Check, Dot } from "lucide-react";
 import type { Metadata } from "next";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Card } from "@/components/ui/card";
+import { PortfolioGrid } from "../portfolio/components/portfolio-grid";
 
 export const metadata: Metadata = {
-    title: "Services",
-    description: "Explore our comprehensive services including Design, Engineering, E-Production, Animation, Machining, Coating, Installation, and Electronics. We provide turnkey solutions from concept to reality.",
-    keywords: "full-service fabrication, design and engineering, CNC machining, themed environment construction, animation studio, installation services Saudi Arabia",
+    title: "Services & Portfolio",
+    description: "Explore our comprehensive services including Design, Engineering, E-Production, Animation, Machining, Coating, Installation, and Electronics. We provide turnkey solutions from concept to reality, and showcase our featured work.",
+    keywords: "full-service fabrication, design and engineering, CNC machining, themed environment construction, animation studio, installation services Saudi Arabia, fabrication portfolio",
 };
 
 export default function ServicesPage() {
@@ -112,6 +113,18 @@ export default function ServicesPage() {
             })}
         </Accordion>
       </div>
+
+       <div className="pt-16 md:pt-24 mt-16 md:mt-24 border-t border-border/50">
+         <div data-aos="fade-up">
+            <Heading className="text-center mb-4">Our Work</Heading>
+            <p className="text-center text-muted-foreground text-lg max-w-3xl mx-auto mb-12">
+              We take pride in our ability to transform complex challenges into tangible, high-quality results. Explore a selection of our projects across various industries.
+            </p>
+          </div>
+          <div data-aos="fade-up" data-aos-delay="100">
+            <PortfolioGrid projects={projects} />
+          </div>
+       </div>
     </div>
   );
 }
