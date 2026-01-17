@@ -1,7 +1,7 @@
 
 import Image from "next/image";
 import { Heading } from "@/components/ui/heading";
-import { ContactForm } from "./components/contact-form";
+import { ContactForm } from "@/app/contact/components/contact-form";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { Phone, Mail, MapPin, User } from "lucide-react";
 import type { Metadata } from "next";

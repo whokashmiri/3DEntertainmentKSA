@@ -9,7 +9,7 @@ import type { Metadata } from "next";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { PortfolioGrid } from "../portfolio/components/portfolio-grid";
+import { PortfolioGrid } from "@/app/portfolio/components/portfolio-grid";
 
 export const metadata: Metadata = {
     title: "Services & Portfolio | 3D Entertainment Co.",
