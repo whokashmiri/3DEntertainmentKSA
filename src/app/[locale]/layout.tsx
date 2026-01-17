@@ -43,7 +43,7 @@ export default async function RootLayout({
           oswald.variable
         )}
       >
-        <NextIntlClientProvider messages={messages}>
+        <NextIntlClientProvider locale={locale} messages={messages}>
           <ClientLayout>{children}</ClientLayout>
         </NextIntlClientProvider>
       </body>

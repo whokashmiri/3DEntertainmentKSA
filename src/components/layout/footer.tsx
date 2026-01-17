@@ -1,5 +1,5 @@
 
-import Link from "next-intl/link";
+import { Link } from "next-intl/navigation";
 import { Factory, Linkedin, Twitter, Instagram, Music2Icon, Mail, PhoneCallIcon, LocateIcon, Pin, PinOffIcon, LocateFixedIcon, MapPlusIcon, MapPinCheck } from "lucide-react";
 import NextImage from "next/image";
 import Logo from "../../../public/assets/Logo/Logo.webp";

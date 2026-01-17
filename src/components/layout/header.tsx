@@ -1,13 +1,12 @@
 "use client";
 
-import Link from "next-intl/link";
-import { usePathname } from "next-intl/navigation";
+import { Link, usePathname } from "next-intl/navigation";
 import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 import { cn } from "@/lib/utils";
-import { Menu, X } from "lucide-react";
+import { Menu } from "lucide-react";
 import NextImage from "next/image";
 import Logo from "../../../public/assets/Logo/Logo.webp";
 import LanguageSwitcher from "../LanguageSwitcher";

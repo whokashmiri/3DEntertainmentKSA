@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next-intl/link";
+import { Link } from "next-intl/navigation";
 import { Button } from "@/components/ui/button";
 import { Heading } from "@/components/ui/heading";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
