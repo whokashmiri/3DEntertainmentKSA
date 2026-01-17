@@ -1,9 +1,10 @@
-
 import type { Metadata } from "next";
 import { Inter, Oswald } from "next/font/google";
-import "./globals.css";
+import "../globals.css";
 import { cn } from "@/lib/utils";
 import ClientLayout from "@/components/ClientLayout";
+import {NextIntlClientProvider} from 'next-intl';
+import {getMessages} from 'next-intl/server';
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const oswald = Oswald({ subsets: ["latin"], variable: "--font-oswald" });
@@ -20,13 +21,21 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+export function generateStaticParams() {
+  return [{locale: 'en'}, {locale: 'ar'}];
+}
+
+export default async function RootLayout({
   children,
+  params: {locale},
 }: Readonly<{
   children: React.ReactNode;
+  params: {locale: string};
 }>) {
+  const messages = await getMessages();
+
   return (
-    <html lang="en" className="dark">
+    <html lang={locale} dir={locale === 'ar' ? 'rtl' : 'ltr'}>
       <body
         className={cn(
           "min-h-screen bg-background font-body antialiased",
@@ -34,7 +43,9 @@ export default function RootLayout({
           oswald.variable
         )}
       >
-        <ClientLayout>{children}</ClientLayout>
+        <NextIntlClientProvider messages={messages}>
+          <ClientLayout>{children}</ClientLayout>
+        </NextIntlClientProvider>
       </body>
     </html>
   );

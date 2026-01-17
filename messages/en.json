@@ -1,0 +1,36 @@
+{
+  "HomePage": {
+    "heroTitle": "3D Entertainment",
+    "heroSubtitle": "Pioneering Saudi Industrial Leadership in Creative Fabrication and Advanced Manufacturing",
+    "exploreServices": "Explore Services",
+    "requestQuote": "Request a Quote",
+    "typewriterText": "3D Entertainment Co. is a multidisciplinary creative and fabrication powerhouse based in Saudi Arabia. We unite artists, architects, engineers, programmers, and master craftsmen with one of the region’s most advanced manufacturing facilities — delivering turnkey solutions for entertainment, film, hospitality, retail, and corporate environments. ",
+    "whatWeDoTitle": "We Design, Engineer, and Build Extraordinary Experiences",
+    "whatWeDoSubtitle": "3D Entertainment Co. is a multidisciplinary creative and fabrication powerhouse based in Saudi Arabia. We unite artists, architects, engineers, programmers, and master craftsmen with one of the region’s most advanced manufacturing facilities — delivering turnkey solutions for entertainment, film, hospitality, retail, and corporate environments.",
+    "learnMore": "Learn More About Us",
+    "industriesTitle": "Industries We Serve",
+    "teamTitle": "Meet the Team",
+    "meetAllPeople": "Meet All Our People",
+    "servicesTitle": "Our Services",
+    "featuredCapabilitiesTitle": "Featured Capabilities",
+    "viewAllServices": "View All Services",
+    "ctaTitle": "Ready to bring your vision to life?",
+    "ctaSubtitle": "Let's discuss how our advanced manufacturing and creative design capabilities can make it happen."
+  },
+  "Header": {
+    "home": "Home",
+    "about": "About Us",
+    "services": "Services & Portfolio",
+    "products": "Products",
+    "technology": "Technology",
+    "people": "People",
+    "industries": "Industries",
+    "contact": "Contact"
+  },
+  "Footer": {
+    "description": "A Saudi-based company specializing in creative design, engineering, CNC machining, fabrication, themed environments, and advanced manufacturing.",
+    "navigate": "Navigate",
+    "connect": "Connect",
+    "copyright": "© {year} 3D Entertainment Co. All rights reserved."
+  }
+}

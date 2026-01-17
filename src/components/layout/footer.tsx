@@ -1,20 +1,24 @@
 
-import Link from "next/link";
+import Link from "next-intl/link";
 import { Factory, Linkedin, Twitter, Instagram, Music2Icon, Mail, PhoneCallIcon, LocateIcon, Pin, PinOffIcon, LocateFixedIcon, MapPlusIcon, MapPinCheck } from "lucide-react";
 import NextImage from "next/image";
 import Logo from "../../../public/assets/Logo/Logo.webp";
-
-const navLinks = [
-  { href: "/about", label: "About Us" },
-  { href: "/services", label: "Services & Portfolio" },
-  { href: "/products", label: "Products" },
-  { href: "/technology", label: "Technology" },
-  { href: "/people", label: "People" },
-  { href: "/industries", label: "Industries" },
-  { href: "/contact", label: "Contact" },
-];
+import { useTranslations } from "next-intl";
 
 export function Footer() {
+  const t = useTranslations("Footer");
+  const tHeader = useTranslations("Header");
+
+  const navLinks = [
+    { href: "/about", label: tHeader("about") },
+    { href: "/services", label: tHeader("services") },
+    { href: "/products", label: tHeader("products") },
+    { href: "/technology", label: tHeader("technology") },
+    { href: "/people", label: tHeader("people") },
+    { href: "/industries", label: tHeader("industries") },
+    { href: "/contact", label: tHeader("contact") },
+  ];
+
   return (
     <footer className="bg-secondary border-t border-border/50">
       <div className="container py-12">
@@ -27,11 +31,11 @@ export function Footer() {
               </span>
             </Link>
             <p className="text-muted-foreground max-w-md">
-              A Saudi-based company specializing in creative design, engineering, CNC machining, fabrication, themed environments, and advanced manufacturing.
+              {t('description')}
             </p>
           </div>
           <div>
-            <h3 className="font-headline text-lg font-semibold uppercase tracking-wider text-white mb-4">Navigate</h3>
+            <h3 className="font-headline text-lg font-semibold uppercase tracking-wider text-white mb-4">{t('navigate')}</h3>
             <ul className="space-y-2">
               {navLinks.map((link) => (
                 <li key={link.href}>
@@ -45,7 +49,7 @@ export function Footer() {
 
      
           <div>
-             <h3 className="font-headline text-lg font-semibold uppercase tracking-wider text-white mb-4">Connect</h3>
+             <h3 className="font-headline text-lg font-semibold uppercase tracking-wider text-white mb-4">{t('connect')}</h3>
                   <div className="flex flex-col text-sm">
            <span className="text-muted-foreground mb-2"> <Mail  className="h-5 w-6 inline" /> info@3dentertainmentksa.com</span>
             <span className="text-muted-foreground mb-2"> <PhoneCallIcon  className="h-5 w-6 inline " /> +966 122 751 997</span>
@@ -56,23 +60,23 @@ export function Footer() {
 
           </div>
             <div className="flex space-x-4 m-3" >
-              <Link href="https://www.tiktok.com/@3dentertainment.c" className="text-muted-foreground hover:text-primary transition-colors">
+              <a href="https://www.tiktok.com/@3dentertainment.c" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
                 <Music2Icon className="h-6 w-6" />
                 <span className="sr-only">TikTok</span>
-              </Link>
-              <Link href="https://www.linkedin.com/company/3d-entertainment-co/" className="text-muted-foreground hover:text-primary transition-colors">
+              </a>
+              <a href="https://www.linkedin.com/company/3d-entertainment-co/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
                 <Linkedin className="h-6 w-6" />
                 <span className="sr-only">LinkedIn</span>
-              </Link>
-              <Link href="https://www.instagram.com/3dentertainmentsa?igsh=dzh3NmM3ZGVkcHF4&utm_source=qr" className="text-muted-foreground hover:text-primary transition-colors">
+              </a>
+              <a href="https://www.instagram.com/3dentertainmentsa?igsh=dzh3NmM3ZGVkcHF4&utm_source=qr" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
                 <Instagram className="h-6 w-6" />
                 <span className="sr-only">Instagram</span>
-              </Link>
+              </a>
             </div>
           </div>
         </div>
         <div className="mt-8 pt-8 border-t border-border/50 text-center text-muted-foreground text-sm">
-          <p>&copy; {new Date().getFullYear()} 3D Entertainment Co. All rights reserved.</p>
+          <p>{t('copyright', {year: new Date().getFullYear()})}</p>
         </div>
       </div>
     </footer>

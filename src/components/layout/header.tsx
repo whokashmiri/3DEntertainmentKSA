@@ -1,31 +1,33 @@
-
 "use client";
 
-import Link from "next/link";
+import Link from "next-intl/link";
+import { usePathname } from "next-intl/navigation";
 import { useState } from "react";
-import { usePathname } from "next/navigation";
+import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 import { cn } from "@/lib/utils";
-import { Menu, X, Factory } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import NextImage from "next/image";
 import Logo from "../../../public/assets/Logo/Logo.webp";
+import LanguageSwitcher from "../LanguageSwitcher";
 
-
-const navLinks = [
-  { href: "/", label: "Home" },
-  { href: "/about", label: "About Us" },
-  { href: "/services", label: "Services & Portfolio" },
-  { href: "/products", label: "Products" },
-  { href: "/technology", label: "Technology" },
-  { href: "/people", label: "People" },
-  { href: "/industries", label: "Industries" },
-  { href: "/contact", label: "Contact" },
-];
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
+  const t = useTranslations("Header");
+
+  const navLinks = [
+    { href: "/", label: t("home") },
+    { href: "/about", label: t("about") },
+    { href: "/services", label: t("services") },
+    { href: "/products", label: t("products") },
+    { href: "/technology", label: t("technology") },
+    { href: "/people", label: t("people") },
+    { href: "/industries", label: t("industries") },
+    { href: "/contact", label: t("contact") },
+  ];
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -37,7 +39,7 @@ export function Header() {
           </span>
         </Link>
         <div className="flex flex-1 items-center justify-end space-x-2">
-          <nav className="hidden md:flex gap-6">
+          <nav className="hidden md:flex gap-6 items-center">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
@@ -50,6 +52,7 @@ export function Header() {
                 {link.label}
               </Link>
             ))}
+            <LanguageSwitcher />
           </nav>
           <div className="md:hidden">
             <Sheet open={isOpen} onOpenChange={setIsOpen}>
@@ -84,6 +87,9 @@ export function Header() {
                     </Link>
                   ))}
                 </nav>
+                <div className="p-4 mt-4 border-t">
+                  <LanguageSwitcher />
+                </div>
               </SheetContent>
             </Sheet>
           </div>

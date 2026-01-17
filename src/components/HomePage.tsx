@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
+import Link from "next-intl/link";
 import { Button } from "@/components/ui/button";
 import { Heading } from "@/components/ui/heading";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
@@ -12,6 +12,7 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 import Autoplay from "embla-carousel-autoplay";
 import React from "react";
 import Typewriter from "typewriter-effect";
+import { useTranslations } from "next-intl";
 
 
 const whatWeDo = [
@@ -33,6 +34,7 @@ const featuredCapabilities = [
 ];
 
 export default function HomePage() {
+  const t = useTranslations('HomePage');
   const heroImage = PlaceHolderImages.find((img) => img.id === "hero-background");
   const leadershipTeam = team.filter(p => p.department === 'Leadership').slice(0, 5);
   const plugin = React.useRef(
@@ -60,18 +62,18 @@ export default function HomePage() {
             <div className="absolute -top-4 -left-4 w-16 h-16 border-t-4 border-l-4 border-primary opacity-50"></div>
             <div className="absolute -bottom-4 -right-4 w-16 h-16 border-b-4 border-r-4 border-primary opacity-50"></div>
             <h1 className="font-headline text-5xl md:text-7xl lg:text-8xl font-extrabold uppercase tracking-widest text-white">
-              3D Entertainment
+              {t('heroTitle')}
             </h1>
           </div>
           <p className="mt-6 text-lg md:text-xl text-slate-300 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">
-            Pioneering Saudi Industrial Leadership in Creative Fabrication and Advanced Manufacturing
+            {t('heroSubtitle')}
           </p>
           <div className="mt-8 flex justify-center gap-4" data-aos="fade-up" data-aos-delay="200">
             <Button asChild size="lg" className="font-bold tracking-wide">
-              <Link href="/services">Explore Services</Link>
+              <Link href="/services">{t('exploreServices')}</Link>
             </Button>
             <Button asChild size="lg" variant="outline" className="font-bold tracking-wide">
-              <Link href="/contact">Request a Quote</Link>
+              <Link href="/contact">{t('requestQuote')}</Link>
             </Button>
           </div>
         </div>
@@ -91,9 +93,7 @@ export default function HomePage() {
             <div className="text-white text-2xl md:text-4xl font-bold text-center max-w-4xl px-4">
               <Typewriter
                 options={{
-                  strings: [
-                    "3D Entertainment Co. is a multidisciplinary creative and fabrication powerhouse based in Saudi Arabia. We unite artists, architects, engineers, programmers, and master craftsmen with one of the region’s most advanced manufacturing facilities — delivering turnkey solutions for entertainment, film, hospitality, retail, and corporate environments. ",
-                  ],
+                  strings: [t('typewriterText')],
                   autoStart: true,
                   loop: true,
                   delay: 50,
@@ -107,10 +107,10 @@ export default function HomePage() {
       <section className="py-20 md:py-32 bg-secondary">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-4xl mx-auto" data-aos="fade-up">
-            <Heading withLine={false} className="justify-center">We Design, Engineer, and Build Extraordinary Experiences</Heading>
+            <Heading withLine={false} className="justify-center">{t('whatWeDoTitle')}</Heading>
              <span className="block mx-auto mt-4 h-1 w-20 bg-primary"></span>
             <p className="mt-6 text-muted-foreground text-lg">
-                3D Entertainment Co. is a multidisciplinary creative and fabrication powerhouse based in Saudi Arabia. We unite artists, architects, engineers, programmers, and master craftsmen with one of the region’s most advanced manufacturing facilities — delivering turnkey solutions for entertainment, film, hospitality, retail, and corporate environments.
+                {t('whatWeDoSubtitle')}
             </p>
             <div className="mt-8 grid grid-cols-2 md:grid-cols-3 gap-x-6 gap-y-4">
               {whatWeDo.map((item, index) => {
@@ -124,7 +124,7 @@ export default function HomePage() {
               })}
             </div>
             <Button asChild size="lg" className="mt-10 font-bold tracking-wide" data-aos="fade-up" data-aos-delay="400">
-              <Link href="/about">Learn More About Us</Link>
+              <Link href="/about">{t('learnMore')}</Link>
             </Button>
           </div>
           <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -162,7 +162,7 @@ export default function HomePage() {
       {/* Industries Served Section */}
       <section className="py-20 md:py-32 bg-background">
         <div className="container mx-auto px-4">
-          <Heading className="text-center mb-12 md:mb-16" data-aos="fade-up">Industries We Serve</Heading>
+          <Heading className="text-center mb-12 md:mb-16" data-aos="fade-up">{t('industriesTitle')}</Heading>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
             {industries.map((industry, index) => {
                 const Icon = industry.icon;
@@ -180,7 +180,7 @@ export default function HomePage() {
       {/* Team Section */}
       <section className="py-20 md:py-32 bg-secondary">
         <div className="container mx-auto px-4">
-          <Heading className="text-center mb-12 md:mb-16" data-aos="fade-up">Meet the Team</Heading>
+          <Heading className="text-center mb-12 md:mb-16" data-aos="fade-up">{t('teamTitle')}</Heading>
           <Carousel
             plugins={[plugin.current]}
             opts={{
@@ -224,7 +224,7 @@ export default function HomePage() {
           </Carousel>
           <div className="text-center mt-12" data-aos="fade-up">
             <Button asChild size="lg" className="font-bold tracking-wide">
-              <Link href="/people">Meet All Our People <ArrowRight className="ml-2 h-5 w-5"/></Link>
+              <Link href="/people">{t('meetAllPeople')} <ArrowRight className="ml-2 h-5 w-5"/></Link>
             </Button>
           </div>
         </div>
@@ -233,7 +233,7 @@ export default function HomePage() {
        {/* Capabilities Section */}
       <section id="capabilities" className="py-20 md:py-32 bg-background">
         <div className="container mx-auto px-4">
-          <Heading className="text-center mb-12 md:mb-16" data-aos="fade-up">Our Services</Heading>
+          <Heading className="text-center mb-12 md:mb-16" data-aos="fade-up">{t('servicesTitle')}</Heading>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {capabilities.map((capability, index) => {
               const Icon = capability.icon;
@@ -254,7 +254,7 @@ export default function HomePage() {
       {/* Featured Projects Section */}
       <section className="py-20 md:py-32 bg-secondary">
         <div className="container mx-auto px-4">
-          <Heading className="text-center mb-12 md:mb-16" data-aos="fade-up">Featured Capabilities</Heading>
+          <Heading className="text-center mb-12 md:mb-16" data-aos="fade-up">{t('featuredCapabilitiesTitle')}</Heading>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {featuredCapabilities.map((capability, index) => {
               const Icon = capability.icon;
@@ -270,7 +270,7 @@ export default function HomePage() {
           </div>
           <div className="text-center mt-12" data-aos="fade-up">
             <Button asChild size="lg" variant="outline" className="font-bold tracking-wide">
-              <Link href="/services">View All Services <ArrowRight className="ml-2 h-5 w-5"/></Link>
+              <Link href="/services">{t('viewAllServices')} <ArrowRight className="ml-2 h-5 w-5"/></Link>
             </Button>
           </div>
         </div>
@@ -279,10 +279,10 @@ export default function HomePage() {
       {/* CTA Section */}
       <section className="bg-background">
         <div className="container mx-auto px-4 py-20 text-center" data-aos="fade-up">
-            <h2 className="font-headline text-4xl font-bold uppercase tracking-wider text-white">Ready to bring your vision to life?</h2>
-            <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">Let's discuss how our advanced manufacturing and creative design capabilities can make it happen.</p>
+            <h2 className="font-headline text-4xl font-bold uppercase tracking-wider text-white">{t('ctaTitle')}</h2>
+            <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">{t('ctaSubtitle')}</p>
             <Button asChild size="lg" className="mt-8 font-bold tracking-wide text-lg py-6 px-10">
-                <Link href="/contact">Request a Quote</Link>
+                <Link href="/contact">{t('requestQuote')}</Link>
             </Button>
         </div>
       </section>
