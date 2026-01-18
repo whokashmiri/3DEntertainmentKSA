@@ -3,7 +3,8 @@ import { Inter, Oswald } from "next/font/google";
 import "../globals.css";
 import { cn } from "@/lib/utils";
 import ClientLayout from "@/components/ClientLayout";
-import {NextIntlClientProvider, useMessages} from 'next-intl';
+import {NextIntlClientProvider} from 'next-intl';
+import {getMessages} from 'next-intl/server';
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const oswald = Oswald({ subsets: ["latin"], variable: "--font-oswald" });
@@ -24,14 +25,15 @@ export function generateStaticParams() {
   return [{locale: 'en'}, {locale: 'ar'}];
 }
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
-  params: {locale},
+  params,
 }: Readonly<{
   children: React.ReactNode;
   params: {locale: string};
 }>) {
-  const messages = useMessages();
+  const locale = params.locale;
+  const messages = await getMessages();
 
   return (
     <html lang={locale} dir={locale === 'ar' ? 'rtl' : 'ltr'}>
