@@ -1,6 +1,7 @@
 
+
 import Image from "next/image";
-import { Link } from "next-intl/navigation";
+import { Link } from "@/i18n/routing";
 import { Heading } from "@/components/ui/heading";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { PlaceHolderImages } from "@/lib/placeholder-images";

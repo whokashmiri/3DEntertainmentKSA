@@ -1,6 +1,7 @@
+
 "use client";
 
-import { Link, usePathname } from "next-intl/navigation";
+import { Link, usePathname } from "@/i18n/routing";
 import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/button";

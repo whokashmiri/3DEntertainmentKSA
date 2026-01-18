@@ -1,7 +1,9 @@
+
 "use client";
 
 import { useLocale } from "next-intl";
-import { useRouter, usePathname } from "next-intl/navigation";
+import { usePathname, useRouter } from "@/i18n/routing"; 
+
 import { useTransition } from "react";
 import { Button } from "./ui/button";
 
