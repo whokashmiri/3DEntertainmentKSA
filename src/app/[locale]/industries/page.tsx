@@ -9,7 +9,11 @@ export const metadata: Metadata = {
     keywords: "theme park fabrication, film set construction, retail store fit-out, architectural fabrication, museum exhibit builders, event fabrication",
 };
 
-export default function IndustriesPage() {
+export function generateStaticParams() {
+  return [{ locale: "en" }, { locale: "ar" }];
+}
+
+export default function IndustriesPage({ params: { locale } }: { params: { locale: string } }) {
   return (
     <div className="container mx-auto px-4 py-16 md:py-24">
       <div data-aos="fade-up">

@@ -18,7 +18,11 @@ export const metadata: Metadata = {
     keywords: "full-service fabrication, design and engineering, CNC machining, themed environment construction, animation studio, installation services Saudi Arabia, fabrication portfolio",
 };
 
-export default function ServicesPage() {
+export function generateStaticParams() {
+  return [{ locale: "en" }, { locale: "ar" }];
+}
+
+export default function ServicesPage({ params: { locale } }: { params: { locale: string } }) {
   return (
     <>
     <div className="container mx-auto px-4 py-16 md:py-24">

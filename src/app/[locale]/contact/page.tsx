@@ -12,7 +12,11 @@ export const metadata: Metadata = {
     keywords: "contact fabrication company, request a quote, engineering services contact, creative design Saudi Arabia, Jeddah fabrication",
 };
 
-export default function ContactPage() {
+export function generateStaticParams() {
+  return [{ locale: "en" }, { locale: "ar" }];
+}
+
+export default function ContactPage({ params: { locale } }: { params: { locale: string } }) {
     const mapImage = PlaceHolderImages.find(p => p.id === "contact-map");
 
     return (

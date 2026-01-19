@@ -81,7 +81,11 @@ const productSections = [
     }
 ];
 
-export default function ProductsPage() {
+export function generateStaticParams() {
+  return [{ locale: "en" }, { locale: "ar" }];
+}
+
+export default function ProductsPage({ params: { locale } }: { params: { locale: string } }) {
   return (
     <>
     <div className="container mx-auto px-4 py-16 md:py-24">

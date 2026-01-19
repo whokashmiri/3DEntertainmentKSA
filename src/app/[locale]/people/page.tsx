@@ -8,6 +8,10 @@ export const metadata: Metadata = {
     keywords: "fabrication team, engineering experts, creative designers, master craftsmen, Saudi Arabia careers",
 };
 
-export default function People() {
+export function generateStaticParams() {
+  return [{ locale: "en" }, { locale: "ar" }];
+}
+
+export default function People({ params: { locale } }: { params: { locale: string } }) {
   return <PeoplePage />;
 }
