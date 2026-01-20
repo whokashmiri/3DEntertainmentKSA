@@ -4,7 +4,7 @@ import "../globals.css";
 import { cn } from "@/lib/utils";
 import ClientLayout from "@/components/ClientLayout";
 import { NextIntlClientProvider } from "next-intl";
-import { getMessages } from "next-intl/server";
+import { getMessages, setRequestLocale } from "next-intl/server";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const oswald = Oswald({ subsets: ["latin"], variable: "--font-oswald" });
@@ -34,8 +34,11 @@ export default async function RootLayout({
   children: React.ReactNode;
   params: { locale: string };
 }) {
-  // ✅ STATIC-SAFE: locale passed explicitly
-  const messages = await getMessages({ locale });
+  // ✅ THIS is the important line for static rendering
+  setRequestLocale(locale);
+
+  // ✅ now safe in static prerender
+  const messages = await getMessages();
 
   return (
     <html lang={locale} dir={locale === "ar" ? "rtl" : "ltr"}>

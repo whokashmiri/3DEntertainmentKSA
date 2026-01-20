@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     "fabrication company Saudi Arabia, themed environment design, creative studio Saudi, engineering and fabrication, immersive experiences",
 };
 
-// ✅ REQUIRED for static export under [locale]
+// ✅ REQUIRED for static export under [locale]s
 export function generateStaticParams() {
   return [{ locale: "en" }, { locale: "ar" }];
 }
