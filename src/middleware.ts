@@ -7,6 +7,7 @@ export default createMiddleware({
   pathnames,
   localePrefix: 'as-needed'
 });
+//locate error
 
 export const config = {
   // Skip all paths that should not be internationalized. This example skips the
